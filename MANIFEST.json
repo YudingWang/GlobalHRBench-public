@@ -25,8 +25,8 @@
     "evaluation/routing/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "evaluation/routing/schema.py": "66100c18861e1f4d680a23d1cb0fe72ca9f40531a71527e5655e2e6028bd13fc",
     "evaluation/routing/scorer.py": "0c27371196d5a62aea6b33c7b7b3c92251d2bb0efdc9c43b96be62a2d7ed7e57",
-    "paper/GlobalHRBench.pdf": "bf428de5f5a2aa56e1030d4971d87c884f0576adf30803e0d526da43109cf963",
-    "paper/source/FILES.sha256": "7479d3248f6876e43d39160f7687295cf5e733456a2776791a74ab264f896ebf",
+    "paper/GlobalHRBench.pdf": "16d1067c00eabc45b966ecf5f2b1a3275b2a3e918901bf3641ef3da95c813fdf",
+    "paper/source/FILES.sha256": "2e2ec73a776f0965e81fe26aafce7ca1dc1371e12cb66b6b3cc543537ce61b5d",
     "paper/source/GlobalHRBench_preprint.bbl": "b0d261225d6256ae56dde758a426387808cf63b005e5b9135774bf2d7cc2119a",
     "paper/source/GlobalHRBench_preprint.tex": "f79155db716c02be60f2e22aa92d15c39a3fd403972024dbc32e8ead1ee163a0",
     "paper/source/README.txt": "ae1a8826074895a0cbb0e075d03e5f0234582acfc938e08e3c3f436640bf4700",
@@ -52,7 +52,7 @@
     "paper/source/assets/human_outcomes.tex": "98587ea5480e14248fc7f29933b3c553965f829ed039494205ac5469fe8fe51a",
     "paper/source/assets/human_semantics.pdf": "e7173dab8d753d7738f61bb65fbf0425ff7be0a9709da217604f2ee72512ac79",
     "paper/source/assets/joint_failures.pdf": "7f9364deda76cd46a24621bb36d5436e514a9c053276f0609fac8f17f7881502",
-    "paper/source/assets/retrieval_models.pdf": "741efa63329493be65cc5f828ce8b3a56907130c8240a4aab2f07b192a7b891b",
+    "paper/source/assets/retrieval_models.pdf": "ae5bb720c29db2e16751c26e55e8692744359139e0f84d177d573ecb4575f7bd",
     "paper/source/assets/retrieval_models.tex": "44cbe07510d04d411e51bc70edf650845b28b572ce5495cf5a5c0fec565bbe65",
     "paper/source/assets/status_breadth.tex": "acae12ea2884d30175c01637132f212444d029708f3fa0abc8c2fa554229245d",
     "paper/source/assets/values_broad.tex": "37142e167517616b64d2d89da47774fb8a7fabd0f5e3a2e61db54f9f3e4b4f2f",
@@ -75,6 +75,7 @@
     "results/human/initial_reviews.jsonl": "9663156a7a5d7818356cd8c8934930f5fce822b0099bb7f46edc6aab239af79a",
     "results/human/joint_counts.json": "f936e7de688b559ad87e873c4eeec2a3e1c9e776092341e39dd841067db7b825",
     "results/human/responses.jsonl": "242ba9d164cfb9e6bb5ff0eb60648c58ac545e0ed92709aa795a5626a839c4d6",
+    "scripts/plot_retrieval.py": "22aa09f373c73530b39d2b2eb42f0ce67c08022d3b4a5ef7d6c3062881645897",
     "scripts/verify_release.py": "8df76f209018ae1717e257bcb5be22de7b530a07ef2ce24f3b8f2789c8d30d4f"
   }
 }
