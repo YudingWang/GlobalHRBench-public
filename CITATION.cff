@@ -9,7 +9,7 @@ authors:
   - family-names: Yao
     given-names: Yuhang
     affiliation: Carnegie Mellon University
-version: "2026.11.15"
+version: "2026.11.15.1"
 date-released: 2026-11-15
 repository-code: "https://github.com/YudingWang/GlobalHRBench-public"
 url: "https://github.com/YudingWang/GlobalHRBench-public"

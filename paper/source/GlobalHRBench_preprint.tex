@@ -6,6 +6,7 @@
 \input{assets/values_resource.tex}
 \input{assets/values_broad.tex}
 \input{assets/values_human.tex}
+\input{assets/values_completion.tex}
 \title{GlobalHRBench: Multilingual Employment-Law QA\\ with Broad Model Evaluation and Deep Human Validation}
 \input{authors}
 \begin{document}
@@ -15,13 +16,13 @@
 \widowpenalty=10000
 
 \begin{abstract}
-\claim{ABSTRACT}{Human resources (HR) compliance questions require more than a correct entitlement value: answers must preserve the conditions of the rule and remain faithful to their sources. We present GlobalHRBench, a source-linked employment-law benchmark with \RNResource{} unique questions across eight jurisdictions and six languages, including a \RNCore{}-question reviewed core. Broad evaluation compares fourteen models under BM25 and jurisdiction-aware retrieval, and seven under three evidence conditions. On \RNARRCore{} canonical tasks, routing over the study's 37-passage retrieval corpus increases evidence Hit@5 from \RBMHit\% to \RRouteHit\% and the automated target-answer score from \RBroadBM\% to \RBroadRoute\%. Deep human validation assesses \RNAudit{} outputs from four models using independent double review and adjudication. With designated evidence, GPT-6.1 Sol achieves \RSDCorrect\% correctness, \RSDFull\% full-rule completeness, and \RSDFidelity\% source fidelity. Yet \RSDUnsupported{} of its rule-complete answers contain unsupported claims, a failure pattern observed in all four models. These results show that better evidence access does not by itself ensure a complete, supported answer. Correctness, rule completeness, and source fidelity reveal distinct failures that a single answer score can miss.}
+\claim{ABSTRACT}{Human resources (HR) compliance questions require more than a correct entitlement value: answers must preserve the conditions of the rule and remain faithful to their sources. We present GlobalHRBench, a source-linked employment-law benchmark with \RNResource{} unique questions across eight jurisdictions and six languages, including a \RNCore{}-question reviewed core. Broad evaluation compares fourteen models under four evidence conditions: closed book, BM25, jurisdiction-aware retrieval, and designated evidence. On \RNARRCore{} canonical tasks, routing over the study's 37-passage retrieval corpus increases evidence Hit@5 from \RBMHit\% to \RRouteHit\% and the automated target-answer score from \RBroadBM\% to \RBroadRoute\%. Deep human validation assesses \RNAudit{} outputs from four models using independent double review and adjudication. With designated evidence, GPT-6.1 Sol achieves \RSDCorrect\% correctness, \RSDFull\% full-rule completeness, and \RSDFidelity\% source fidelity. Yet \RSDUnsupported{} of its rule-complete answers contain unsupported claims, a failure pattern observed in all four models. These results show that better evidence access does not by itself ensure a complete, supported answer. Correctness, rule completeness, and source fidelity reveal distinct failures that a single answer score can miss.}
 \end{abstract}
 
 \section{Introduction}
 \claim{INTRO}{Cross-border human resources (HR) teams must interpret employment rules when answering questions about leave, working time, and other entitlements. A useful answer must identify the governing jurisdiction and preserve the conditions under which a rule applies. A correct number can conceal a missing service requirement; a complete rule can be accompanied by an unsupported exception. Studies of legal hallucinations document related reliability risks \citep{dahl2024legalhallucinations,magesh2024hallucinationfree}. These concerns motivate GlobalHRBench: an evaluation of whether models can retrieve relevant authority, answer the question, preserve the required rule, and support their material claims.}
 
-\claim{CONTRIBUTION}{We make three contributions (Figure~\ref{fig:architecture}). \textbf{First, a multilingual resource:} GlobalHRBench provides \RNResource{} canonical employment-law questions with linked sources and a \RNCore{}-question reviewed core. \textbf{Second, broad model evaluation:} a fourteen-model retrieval comparison and a seven-model evidence-access comparison measure how model choice and available evidence affect target-answer performance. \textbf{Third, deep human validation:} two independent blind reviews per output, followed by adjudication, distinguish correctness, required-rule completeness, and source fidelity across \RNAudit{} outputs. Together, these layers connect broad performance comparisons to specific semantic failures.}
+\claim{CONTRIBUTION}{We make three contributions (Figure~\ref{fig:architecture}). \textbf{First, a multilingual resource:} GlobalHRBench provides \RNResource{} canonical employment-law questions with linked sources and a \RNCore{}-question reviewed core. \textbf{Second, broad model evaluation:} a fourteen-model comparison under four evidence conditions measures how model choice and evidence access affect target-answer performance. \textbf{Third, deep human validation:} two independent blind reviews per output, followed by adjudication, distinguish correctness, required-rule completeness, and source fidelity across \RNAudit{} outputs. Together, these layers connect broad performance comparisons to specific semantic failures.}
 
 \claim{INTRO}{We ask three research questions. \textbf{RQ1:} How do models differ, and how does jurisdiction-aware retrieval affect evidence retrieval and answer scores? \textbf{RQ2:} How does evidence access affect answer performance? \textbf{RQ3:} Which rule-completeness and source-fidelity failures can an ordinary answer score miss? The broad comparisons address model and retrieval differences. The human evaluation examines evidence access in greater semantic detail and identifies failures within individual answers. This design combines comparative breadth with a closer account of what makes an HR compliance answer useful.}
 
@@ -66,17 +67,16 @@
 \toprule
 Study & Tasks / models & Evidence comparison & Measurement and purpose \\
 \midrule
-Retrieval comparison & \RNARRCore{} / 14 & BM25 vs country routing & Target-answer score; model and retrieval differences \\
-Evidence access & \RNARRCore{} / 7 & Closed / BM25 / designated & Target-answer score; performance differences across evidence conditions \\
+Broad evaluation & \RNARRCore{} / 14 & Closed / BM25 / routed / designated & Target-answer score; retrieval and evidence comparisons \\
 Human validation & \RNCore{} / 4 & C: public-cue / D: designated & Correctness, rule completeness, and source fidelity \\
 \bottomrule
 \end{tabular}
 }
-\caption{\claim{CAPSTUDY}{Evaluation design. All task counts exclude exact aliases. Each broad study uses its own matched model outputs and BM25 baseline. A separate \RNARRUnique{}-question analysis describes resource-wide performance.}}
+\caption{\claim{CAPSTUDY}{Evaluation design. All task counts exclude exact aliases. Both broad comparisons use the same fourteen models, canonical tasks and BM25 baseline. A separate \RNARRUnique{}-question analysis describes resource-wide performance.}}
 \label{tab:studies}
 \end{table*}
 
-\claim{DESIGN}{Table~\ref{tab:studies} summarizes three complementary comparisons. The fourteen-model study tests whether jurisdiction-aware retrieval improves performance across models. The seven-model study compares closed-book, retrieved, and designated evidence to examine the role of evidence access. The four-model human evaluation asks what these answer scores leave unresolved: whether responses preserve the required rule and support every material claim. Broad results use automated target-answer matching on the base question versions; human results use semantic judgments on the reviewed core. We analyze each study within its own protocol and do not pool scores across layers. A six-model structured-output diagnostic is reported separately in Appendix~\ref{app:operational}.}
+\claim{DESIGN}{Table~\ref{tab:studies} summarizes broad evaluation and deep human validation. Broad evaluation uses one fourteen-model matrix with four evidence conditions. Figure~\ref{fig:twelve} compares BM25 with jurisdiction-aware routing; Figure~\ref{fig:five} compares closed-book, BM25 and designated evidence using the same BM25 baseline. The four-model human evaluation asks what these answer scores leave unresolved: whether responses preserve the required rule and support every material claim. Broad results use automated target-answer matching on the base question versions; human results use semantic judgments on the reviewed core. We keep automated broad scores separate from human semantic judgments. A six-model structured-output diagnostic is reported separately in Appendix~\ref{app:operational}.}
 
 
 
@@ -85,7 +85,7 @@ Human validation & \RNCore{} / 4 & C: public-cue / D: designated & Correctness, 
 
 \claim{ARRMETRIC}{The automated \emph{target-answer score} checks quantities, units, and polarity where available, and otherwise uses answer-text matching with lexical heuristics. It measures agreement with the reference target rather than human judgment of the full answer. Citation overlap measures matching source IDs. Each comparison keeps its original scorer and failure denominator.}
 
-\claim{ARRPROTOCOL}{Seven models are evaluated under closed-book, BM25, and designated evidence; fourteen are evaluated under matched BM25 and country routing. Each model in the routing study has a BM25 baseline from the same batch. Appendix~\ref{app:arr-details} lists models and protocol details; the materials retain endpoint IDs, response normalization, and the failed-request replay policy.}
+\claim{ARRPROTOCOL}{All fourteen models are evaluated on the same canonical tasks under closed-book, BM25, country routing and designated evidence. The retained BM25/routing comparison supplies the common BM25 column. We preserve existing closed-book and designated-evidence responses and complete those conditions for the seven models previously missing them. This yields 3,360 model--task--condition observations; runs were collected at different times, with fixed task identities and evidence packets. Appendix~\ref{app:arr-details} lists models and protocol details; the materials retain endpoint IDs, response normalization, and the failed-request replay policy.}
 
 \begin{figure*}[t]
 \centering
@@ -99,18 +99,7 @@ Human validation & \RNCore{} / 4 & C: public-cue / D: designated & Correctness, 
 
 \claim{STATISTICS}{We report question-weighted and equal-source-group means for the broad comparisons. Paired bootstrap intervals resample the five source groups, with models fixed (5,000 replicates; seed 31). The human evaluation uses question, equal-fact-group, and dependency-group analyses (2,000 paired whole-group replicates; seed 20261105). Its \RNFact{} fact groups, \RNDependency{} dependency groups, \RNSource{} primary-source groups, and \RNInstrument{} instruments describe different sources of dependence. These intervals summarize uncertainty within the constructed benchmark; model-by-question output counts are not independent sample sizes.}
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth]{assets/evidence_models.pdf}
-\caption{\claim{CAPFIVE}{Seven-model closed-book/BM25/designated-evidence comparison on \RNARRCore{} canonical tasks from the base collection per cell. Every bar aggregates row-level scores from the same target-answer scorer; the same predetermined task representative is used across all conditions. Designated evidence supplies governing material but does not guarantee an accurate interpretation.}}
-\label{fig:five}
-\par\medskip\begingroup\makeatletter\def\@captype{table}\makeatother
-\centering\small
-\input{assets/arr_full_resource.tex}
-\caption{\claim{CAPARRFULL}{Resource-wide five-model target-answer scores (\%) over all \RNARRUnique{} unique tasks in the base collection. This descriptive view includes development and test material and complements the matched \RNARRCore{}-task main comparison; it is not an additional held-out test. Each canonical task has equal weight and failures remain in the denominator.}}
-\label{tab:arr-full}
-\endgroup
-\end{figure*}
+% Figure 5 is placed in the broad result section below.
 
 
 
@@ -144,12 +133,25 @@ Human validation & \RNCore{} / 4 & C: public-cue / D: designated & Correctness, 
 
 
 
-\subsection{RQ2: Seven models under three evidence conditions}
+\subsection{RQ2: Evidence access across the same fourteen models}
+
+\begin{figure*}[!tp]
+\centering
+\includegraphics[width=\textwidth]{assets/evidence_models.pdf}
+\caption{\claim{CAPFIVE}{Fourteen-model closed-book/BM25/designated-evidence comparison on \RNARRCore{} canonical tasks from the base collection per cell. Every cell contains the same predetermined task representatives. BM25 scores are identical to those in Figure~\ref{fig:twelve}; all bars use the same target-answer scoring rules. Designated evidence supplies governing material but does not guarantee an accurate interpretation.}}
+\label{fig:five}
+\par\medskip\begingroup\makeatletter\def\@captype{table}\makeatother
+\centering\small
+\input{assets/arr_full_resource.tex}
+\caption{\claim{CAPARRFULL}{Resource-wide five-model target-answer scores (\%) over all \RNARRUnique{} unique tasks in the base collection. This descriptive view includes development and test material and complements the matched \RNARRCore{}-task main comparison; it is not an additional held-out test. Each canonical task has equal weight and failures remain in the denominator.}}
+\label{tab:arr-full}
+\endgroup
+\end{figure*}
 
 
-\claim{RQTWO}{Across the seven models on the canonical core, the target-answer score is \RFiveClosed\% closed-book, \RFiveBM\% with BM25, and \RFiveGold\% with designated evidence (Figure~\ref{fig:five}). This matrix exposes substantial model and evidence-condition variation. Claude Sonnet 5, GPT-6.1 Sol and Qwen 3.8 Flash each reach 70.0\% with designated evidence. GPT-4o mini does not improve from BM25 to designated evidence in this cell. We therefore treat designated evidence as an evidence-access diagnostic rather than an assured empirical ceiling.}
+\claim{RQTWO}{Across the same fourteen models and canonical tasks, the target-answer score is \RFiveClosed\% closed-book, \RFiveBM\% with BM25, and \RFiveGold\% with designated evidence (Figure~\ref{fig:five}). The BM25 column is shared with Figure~\ref{fig:twelve}, so the two figures describe different evidence comparisons within one model--task matrix. BM25 scores below closed book on average in this cohort, showing that adding retrieved context is not uniformly beneficial. Designated evidence supplies governing material, but performance still varies across models; access alone does not ensure an accurate answer.}
 
-\claim{RQTWO}{Retrieval success helps explain the BM25 results. On the 32 canonical retrieval hits, mean seven-model performance is \RSliceHitBM\% with BM25 versus \RSliceHitClosed\% closed-book. On the 28 misses, the corresponding scores are \RSliceMissBM\% and \RSliceMissClosed\%. These descriptive strata show how an overall RAG score can conceal different behavior when governing evidence is present or absent. They are not randomized treatment groups. Table~\ref{tab:arr-evidence-ci} reports paired source-group sensitivities.}
+\claim{RQTWO}{Retrieval success helps explain the BM25 results. On the 32 canonical retrieval hits, mean fourteen-model performance is \RSliceHitBM\% with BM25 versus \RSliceHitClosed\% closed-book. On the 28 misses, the corresponding scores are \RSliceMissBM\% and \RSliceMissClosed\%. These descriptive strata show how an overall RAG score can conceal different behavior when governing evidence is present or absent. They are not randomized treatment groups. Table~\ref{tab:arr-evidence-ci} reports paired source-group sensitivities.}
 
 
 
@@ -159,7 +161,14 @@ Human validation & \RNCore{} / 4 & C: public-cue / D: designated & Correctness, 
 
 
 
-\begin{figure*}[t]
+% Figure 6 is placed next to the human RQ2 results below.
+
+\FloatBarrier
+
+\section{Deep Human Semantic Validation}
+\subsection{RQ2: Evidence access under full-answer review}
+
+\begin{figure*}[!tp]
 \centering
 \includegraphics[width=\textwidth]{assets/human_semantics.pdf}
 \caption{\claim{CAPHUMAN}{Human semantic evaluation under public-cue retrieval (C) and designated evidence (D), with \RNCore{} questions per model and condition. Bars report question-weighted, protocol-adjusted correctness, full-rule completeness, and source fidelity; failures remain in the denominator.}}
@@ -171,9 +180,6 @@ Human validation & \RNCore{} / 4 & C: public-cue / D: designated & Correctness, 
 \label{tab:human-values}
 \endgroup
 \end{figure*}
-
-\section{Deep Human Semantic Validation}
-\subsection{RQ2: Evidence access under full-answer review}
 \claim{DEEPRESULT}{Figure~\ref{fig:human} evaluates semantic outcomes over all \RNCore{} reviewed questions. Correctness rises from \ROCCorrect\% under C to \RODCorrect\% under D for GPT-4.1 mini, from \RQCCorrect\% to \RQDCorrect\% for Qwen3.8 Flash, from \RSCCorrect\% to \RSDCorrect\% for GPT-6.1 Sol, and from \RDCCorrect\% to \RDDCorrect\% for DeepSeek V4.1 Flash. These matched C/D comparisons complement the broad evidence-access comparison with full-answer human judgments.}
 
 \claim{DEEPRESULT}{For GPT-6.1 Sol, correctness under retrieval is \RSCCorrect\% across all \RNCore{} questions but reaches \RSCAvailableCorrect\% among the \RSCAvailableN{} questions for which the retrieved packet contains all required evidence. This suggests that missing governing evidence is an important source of error, although the evidence-available subset is descriptive rather than a randomized comparison.}
@@ -185,15 +191,17 @@ Human validation & \RNCore{} / 4 & C: public-cue / D: designated & Correctness, 
 
 
 
-\begin{figure*}[t]
+% Figure 7 is placed next to the human RQ3 results below.
+
+\subsection{RQ3: Failures an ordinary answer score misses}
+\label{sec:rq3}
+
+\begin{figure*}[!tp]
 \centering
 \includegraphics[width=\textwidth]{assets/joint_failures.pdf}
 \caption{\claim{CAPFAIL}{Joint rule-completeness and source-fidelity judgments, using raw adjudicated labels. Full/incomplete concerns required-rule coverage; supported/unsupported concerns all material claims. Red segments identify complete answers with unsupported additions. This descriptive cross-tab complements the protocol-adjusted rates in Figure~\ref{fig:human}.}}
 \label{fig:joint}
 \end{figure*}
-
-\subsection{RQ3: Failures an ordinary answer score misses}
-\label{sec:rq3}
 
 \claim{JOINTFAIL}{Figure~\ref{fig:joint} shows the distinction within individual answers. Under designated evidence, \RODUnsupported{} GPT-4.1 mini and \RQDUnsupported{} Qwen answers cover the complete required rule yet include an unsupported material claim. The same pattern appears in \RSDUnsupported{} GPT-6.1 Sol and \RDDUnsupported{} DeepSeek answers. Under retrieval, these counts are \ROCUnsupported{}, \RQCUnsupported{}, \RSCUnsupported{}, and \RDCUnsupported{}, respectively. Other answers stay faithful to their sources while omitting required rule components. Thus, a response can succeed on one dimension and fail on another.}
 
@@ -211,6 +219,8 @@ Human validation & \RNCore{} / 4 & C: public-cue / D: designated & Correctness, 
 \label{tab:agreement}
 \end{table}
 
+\FloatBarrier
+
 \section{Discussion}
 \claim{DISCUSSION}{The human evaluation shows why correctness, rule completeness, and source fidelity should be considered together. Correctness asks whether an answer resolves the requested legal issue, while rule completeness checks whether it preserves all required propositions and dependencies. Source fidelity asks whether the supplied evidence supports every material claim, including additions beyond the requested rule. These dimensions overlap, but a high score on one does not ensure success on the others. The French leave case illustrates this distinction: the answer preserves the entitlement and its required conditions, yet adds a qualification that the evidence packet does not support. A single correctness score would obscure that addition, just as fidelity alone would not reveal an omitted eligibility condition. Here, unsupported means unsupported by the supplied packet; it does not establish that a claim is legally false.}
 
@@ -227,7 +237,7 @@ Human validation & \RNCore{} / 4 & C: public-cue / D: designated & Correctness, 
 \section*{Limitations}
 \claim{LIMITATIONS}{Coverage is multilingual but uneven. The broad main cohort is predominantly English, and its five source groups limit uncertainty estimation. The resource-wide analysis includes development material and is not a held-out performance estimate. Language, jurisdiction, instrument, and answer type are confounded; the reviewed core has only one French question. The resource is not a certification of current law. Group-based resampling accounts for specified dependencies without establishing statistical independence.}
 
-\claim{LIMITATIONS}{The automated target-answer scorer uses lexical heuristics and can accept an answer with incomplete legal meaning; its applicability extractor can also miss equivalent wording. Human semantic evaluation covers four models under C/D conditions. Its findings do not establish semantic error rates for the broader model set. Reviewers may make mistakes, model or condition cues can remain in blinded content, and permitted tool assistance was not quantified. Shared review-slot codes support pooled agreement rather than person-level reliability estimates. The evaluation layers also use different question versions and generation protocols. Country filtering changes packet composition and sometimes size, so it does not isolate every retrieval mechanism. Finally, benchmark performance does not measure real HR decisions or downstream harms.}
+\claim{LIMITATIONS}{The automated target-answer scorer uses lexical heuristics and can accept an answer with incomplete legal meaning; its applicability extractor can also miss equivalent wording. Human semantic evaluation covers four models under C/D conditions. Its findings do not establish semantic error rates for the broader model set. Reviewers may make mistakes, model or condition cues can remain in blinded content, and permitted tool assistance was not quantified. Shared review-slot codes support pooled agreement rather than person-level reliability estimates. The evaluation layers use different question versions and generation protocols. Broad cells were collected across multiple runs; fixed tasks do not eliminate temporal or provider variation. Country filtering changes packet composition and sometimes size, so it does not isolate every retrieval mechanism. Finally, benchmark performance does not measure real HR decisions or downstream harms.}
 
 \claim{LIMITATIONS}{The six-model structured-output diagnostic has substantial JSON failures and provider-control deviations (Appendix~\ref{app:operational}). These characterize adherence to the specified output contract rather than legal competence.}
 
@@ -242,10 +252,10 @@ Human validation & \RNCore{} / 4 & C: public-cue / D: designated & Correctness, 
 
 \claim{BASELABEL}{The internal label \texttt{ARR} in the released data and experiment files refers to the original base collection and its associated evaluation runs. We retain it in filenames and record IDs for traceability.}
 
-\claim{ARRPROTOCOL}{The seven-model matrix uses GPT-4o mini, Gemini 3.5 Flash-Lite, Qwen3.8 Flash, Llama 3.1 8B, Claude Sonnet 5, GPT-6.1 Sol, and DeepSeek V4.1 Flash under closed-book, global BM25 top-five, and designated evidence. The fourteen-model comparison additionally includes Gemini 3.6 Flash, Claude Haiku 5.5, Qwen3.6 27B, DeepSeek V3, Mistral Large 4, Kimi K2.5, and GLM-5. Each model has matched BM25 and country-filtered responses generated in the same batch. The evidence-access matrix uses its own BM25 responses. We evaluated GPT-6.1 Sol and DeepSeek V4.1 Flash on the same fixed canonical representatives, with the existing prompts, evidence packets, response contracts, and study-specific scorers. The 423-task resource-wide analysis retains its original five models.}
+\claim{ARRPROTOCOL}{The broad matrix includes GPT-4o mini, Gemini 3.5 Flash-Lite, Qwen3.8 Flash, Llama 3.1 8B, Claude Sonnet 5, GPT-6.1 Sol, DeepSeek V4.1 Flash, Gemini 3.6 Flash, Claude Haiku 5.5, Qwen3.6 27B, DeepSeek V3, Mistral Large 4, Kimi K2.5, and GLM-5. All use the same 60 canonical task representatives under four evidence conditions. The original BM25 and country-filtered pairs are retained unchanged and supply the common main baseline. The earlier seven-model evidence-access BM25 responses remain archived as a separate sensitivity record. Existing closed-book and designated-evidence responses are retained; the seven missing model pairs of conditions were completed on 16 November 2026 UTC, adding 840 outputs. The 423-task resource-wide analysis retains its original five models.}
 
 
-\claim{NATIVECONFIG}{The two added models were evaluated on 14 November 2026 UTC. GPT-6.1 Sol uses its native reasoning interface with \texttt{reasoning\_effort=low}; \texttt{temperature} and \texttt{top\_p} are omitted. DeepSeek V4.1 Flash uses \texttt{enable\_thinking=false}, temperature zero, and top-$p$ one. Broad requests use the original 1,800-token cap, with one retry at 4,000 tokens for truncation or one retry for a transient API failure. Model IDs, exact request payloads, raw responses, and all attempts are retained.}
+\claim{NATIVECONFIG}{The two added models were evaluated on 14 November 2026 UTC. GPT-6.1 Sol uses its native reasoning interface with \texttt{reasoning\_effort=low}; \texttt{temperature} and \texttt{top\_p} are omitted. DeepSeek V4.1 Flash uses \texttt{enable\_thinking=false}, temperature zero, and top-$p$ one. Completion requests for the seven previously missing models use temperature zero without an explicit reasoning override, matching their original retrieval settings. Broad requests use the original 1,800-token cap, with one retry at 4,000 tokens for truncation or one retry for a transient API failure. Model IDs, exact request payloads, raw responses, and all attempts are retained.}
 
 \claim{RQONE}{The preserved offline hybrid comparison also benefits from explicit public country cues: on the canonical core, Recall@1 changes from 43.3\% to 53.3\% and Recall@5 from 61.7\% to 91.7\%. This score-bonus reranker and the online hard-filtered BM25 are separate mechanisms. Their results support the utility of visible jurisdiction information within this resource; they do not evaluate inference of an unstated jurisdiction or justify combining all routed systems under one score.}
 
@@ -269,7 +279,7 @@ Human validation & \RNCore{} / 4 & C: public-cue / D: designated & Correctness, 
 \begin{table*}[!t]
 \centering\small
 \input{assets/evidence_paired.tex}
-\caption{\claim{CAPARREVIDENCE}{Seven-model paired evidence differences, in percentage points, on the canonical core. Each bootstrap resamples the five historical source groups with models fixed. These descriptive intervals do not establish model-population effects. ``Oracle'' names the saved designated-evidence condition.}}
+\caption{\claim{CAPARREVIDENCE}{Fourteen-model paired evidence differences, in percentage points, on the canonical core. Each bootstrap resamples the five historical source groups with models fixed. These descriptive intervals do not establish model-population effects. ``Oracle'' names the saved designated-evidence condition.}}
 \label{tab:arr-evidence-ci}
 \end{table*}
 \begin{table*}[!t]
@@ -328,8 +338,8 @@ Human validation & \RNCore{} / 4 & C: public-cue / D: designated & Correctness, 
 \claim{APPROBUST}{Provider-reported usage revealed deviations from the requested controls: 38 responses reported reasoning despite the disable request, 26 exceeded the requested completion-token cap, and six exceeded it even after reported reasoning tokens were subtracted. These categories overlap. We retained all responses and documented the execution amendment and accounting in the materials.}
 
 \section{Reproducibility}
-\claim{APPREPRO}{The public project is available at \url{https://github.com/YudingWang/GlobalHRBench-public}. Release \href{https://github.com/YudingWang/GlobalHRBench-public/releases/tag/v2026.11.15}{v2026.11.15} corresponds to this paper's results. It includes the 501-question inventory, reviewed-core annotations and source records, all \RNAudit{} human-evaluated answer texts and request bodies, \RNForms{} anonymous initial review forms, final semantic labels, and evaluation code. Canonical IDs link study-specific questions and results; a machine-readable manifest records file hashes.}
-\claim{APPREPRO}{The public verification script recomputes human scores from released annotations, checks agreement, aggregate results and paired intervals, and re-scores available broad predictions with the original automated scorers. The original five-model evidence-access predictions and both added models' broad predictions are included for the main comparisons. The original twelve-model retrieval cohort retains item scores for reaggregation, but lacks answer texts for complete rescoring. The paper source includes editable SVG illustrations, vector statistical figures and all reported tables.}
+\claim{APPREPRO}{The public project is available at \url{https://github.com/YudingWang/GlobalHRBench-public}. Release \href{https://github.com/YudingWang/GlobalHRBench-public/releases/tag/v2026.11.15.1}{v2026.11.15.1} corresponds to this paper's results. It includes the 501-question inventory, reviewed-core annotations and source records, all \RNAudit{} human-evaluated answer texts and request bodies, \RNForms{} anonymous initial review forms, final semantic labels, and evaluation code. Canonical IDs link study-specific questions and results; a machine-readable manifest records file hashes.}
+\claim{APPREPRO}{The public verification script recomputes human scores from released annotations, checks agreement, aggregate results and paired intervals, and re-scores available broad predictions with the original automated scorers. The retained closed-book and designated-evidence predictions and all 840 completion outputs are included for the main comparisons. Both recently added models also retain their BM25 and routed responses. The original twelve-model retrieval cohort retains item scores for reaggregation, but lacks answer texts for complete rescoring. The paper source includes editable SVG illustrations, vector statistical figures and all reported tables.}
 \claim{APPREPRO}{Original reviewer workbooks and identifying metadata remain private. The public verification entry point covers the main broad and human comparisons; it does not reconstruct the ancillary resource-wide analysis or the response-contract diagnostic in Appendix~\ref{app:operational}. These release boundaries are documented in the repository. Source material remains subject to its original reuse terms.}
 
 \end{document}

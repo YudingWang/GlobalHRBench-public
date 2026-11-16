@@ -1,0 +1,22 @@
+{
+  "description": "Previous seven-model evidence-access BM25 remains archived and is not the new shared main baseline.",
+  "previous_summary": [
+    {
+      "condition": "closed",
+      "n_outputs": 420,
+      "target_answer_score": 0.3404761904761905
+    },
+    {
+      "condition": "rag",
+      "n_outputs": 420,
+      "target_answer_score": 0.3476190476190476
+    },
+    {
+      "condition": "oracle",
+      "n_outputs": 420,
+      "target_answer_score": 0.5452380952380952
+    }
+  ],
+  "shared_bm25_seven_model_mean": 0.34523809523809523,
+  "previous_rows_path": "results/broad/historical_seven_model/evidence_items.jsonl"
+}

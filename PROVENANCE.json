@@ -108,8 +108,9 @@
     },
     {
       "file": "paper/GlobalHRBench.pdf",
-      "sha256": "48a57414f5fccc1351f8f4959157e58c23820d4abde7f887c5c1a17f7f3a4fff",
-      "transfer": "byte-identical"
+      "sha256": "58087df3d265e7edd94c5e86c6c49e86a127ddc458319f108b4f7c7ccea40bc6",
+      "transfer": "Completed broad-matrix paper update; prior import hash retained.",
+      "initial_import_sha256": "48a57414f5fccc1351f8f4959157e58c23820d4abde7f887c5c1a17f7f3a4fff"
     }
   ],
   "privacy_transformations": [
@@ -118,5 +119,23 @@
     "Original answer strings and scoring labels retained",
     "No private Git history copied"
   ],
-  "scope": "Offline research snapshot, not provider account archives or historical submissions"
+  "scope": "Offline research snapshot, not provider account archives or historical submissions",
+  "broad_matrix_completion": {
+    "models": 14,
+    "tasks": 60,
+    "conditions": [
+      "closed",
+      "rag",
+      "country_filtered_rag",
+      "oracle"
+    ],
+    "rows": 3360,
+    "new_outputs": 840,
+    "retained_observations": 2520,
+    "shared_baseline": "Retained fourteen-model retrieval-comparison BM25 column",
+    "historical_baseline": "Previous seven-model evidence-access BM25 observations preserved separately",
+    "human_evaluation_changed": false,
+    "release": "v2026.11.15.1",
+    "scoring_helpers_identical": true
+  }
 }

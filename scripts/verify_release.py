@@ -77,16 +77,31 @@ def run():
  eq(all_exact/1104,expected['all_labels_exact_output_agreement']['raw_exact_agreement']);assert needs_adjudication==113
  # Broad evaluation retains its own automated scorers and question versions.
  broad=read('results/broad/evidence_items.jsonl');routes=read('results/broad/retrieval_items.jsonl');summary=load('results/broad/summary.json');queries=indexed(read('data/broad_questions.jsonl'),'public_id')
- assert len(broad)==1260 and len(routes)==840
+ assert len(broad)==2520 and len(routes)==840
+ matrix=read('results/broad/matrix_items.jsonl');assert len(matrix)==3360
+ cells={(r['model'],r['canonical_question_id'],r['condition']):r for r in matrix};assert len(cells)==3360
+ assert len({r['model'] for r in matrix})==14
+ for r in routes:
+  for condition,field in [('rag','bm25'),('country_filtered_rag','country_filtered')]:
+   eq(cells[r['model'],r['canonical_question_id'],condition]['metrics']['correct'],r[field+'_correct'])
+ old=read('results/broad/historical_seven_model/evidence_items.jsonl')
+ for r in old:
+  if r['condition'] in ['closed','oracle']:eq(cells[r['model'],r['canonical_question_id'],r['condition']]['metrics'],r['metrics'])
  bm=indexed(broad,'request_id');rescored=0
  for r in read('results/broad/available_predictions.jsonl'):
+  if 'response_sha256' in r:
+   assert hashlib.sha256(r['raw_text'].encode()).hexdigest()==r['response_sha256']
+   payload=json.loads(r['request']['messages'][1]['content'])
+   assert payload['input']['question']==queries[r['query_id']]['question']
+   assert [e['id'] for e in payload['evidence']]==r['evidence_source_ids']
+   assert r['request']['model']==r['model_id']
   cond=r['condition'] if r['condition'] in ('closed','oracle') else 'rag'
   scorer=evidence_score if r['study']=='evidence_access' else routing_score
   result=scorer(r['prediction'],queries[r['query_id']],setting=cond,visible_passage_ids=set(r['evidence_source_ids']) if cond!='closed' else None)
   expected_metrics=bm[r['request_id']]['metrics'] if r['study']=='evidence_access' else r['metrics']
   for k,v in expected_metrics.items():eq(result[k],v)
   rescored+=1
- assert rescored==1500
+ assert rescored==1920
  for k,v in paired_summary(routes,'bm25_correct','country_filtered_correct').items():eq(summary['retrieval_pooled'][k],v)
  for cell in summary['retrieval_ordered']:
   rows=[r for r in routes if r['model']==cell['model_id']]
@@ -97,10 +112,13 @@ def run():
   assert len(rows)==60
   for m,v in cell['metrics'].items():
    eq(v['question'],mean([r['metrics'][m] for r in rows]));eq(v['equal_groups'],equal_groups([dict(r,v=r['metrics'][m]) for r in rows],'v')['estimate'])
+ for t in summary['evidence_pooled']:
+  rr=[r for r in broad if r['condition']==t['condition']]
+  eq(t['target_answer_score'],mean([r['metrics']['correct'] for r in rr]));eq(t['n_outputs'],len(rr))
  by={(r['model'],r['canonical_question_id'],r['condition']):r for r in broad}
  for t in summary['evidence_paired']:
   rows=[dict(group_id=by[m,q,t['left_condition']]['group_id'],left=by[m,q,t['left_condition']]['metrics']['correct'],right=by[m,q,t['right_condition']]['metrics']['correct']) for m in sorted({r['model'] for r in broad}) for q in sorted({r['canonical_question_id'] for r in broad})]
   for k,v in paired_summary(rows,'left','right').items():eq(t[k],v)
- result={'passed':True,'questions':501,'reviewed_questions':138,'human_outputs':1104,'initial_reviews':2208,'adjudications':113,'human_aggregate_rows_checked':len(tables),'broad_predictions_rescored':rescored,'retrieval_pairs':840,'evidence_access_outputs':1260,'model_calls':0,'scores_modified':False}
+ result={'passed':True,'questions':501,'reviewed_questions':138,'human_outputs':1104,'initial_reviews':2208,'adjudications':113,'human_aggregate_rows_checked':len(tables),'broad_predictions_rescored':rescored,'retrieval_pairs':840,'evidence_access_outputs':2520,'full_matrix_outputs':3360,'common_bm25_verified':True,'model_calls':0,'scores_modified':False}
  print(json.dumps(result,indent=2))
 if __name__=='__main__':run()

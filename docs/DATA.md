@@ -30,3 +30,9 @@ Source dates are preserved as recorded, including nulls; this export does not fi
 ## Example behind the correctness/completeness clarification
 
 The Dutch employment-information example in Section 6.1 is request `GHB-U-6e10b342e44a784b55aa6182` (Qwen3.8 Flash, designated evidence). Its existing adjudication marks all required atoms covered but the full answer incorrect because an additional change-notification claim omits statutory exceptions. The answer, original final rationale, and scores are in the three human result files joined by this request ID. No new judgment was introduced for the paper clarification.
+
+## Complete broad matrix
+
+`results/broad/matrix_items.jsonl` contains 3,360 model–task–condition records (14 × 60 × 4). `evidence_items.jsonl` contains its 2,520 closed-book/BM25/designated records; `retrieval_items.jsonl` contains the 840 BM25/routing pairs. The BM25 score for every model/task is identical between the two views. The old seven-model evidence-access baseline is preserved under `results/broad/historical_seven_model/` and does not contribute a second BM25 observation to the main matrix.
+
+`record_origin` distinguishes retained evidence-access outputs, retained retrieval-comparison scores, and new completion outputs. A `GHB-SAVED-` ID is a derived public record ID for a retained score-only cell, not a recovered original API request ID. Existing request IDs are preserved where available. Native request bodies, final answers and parsed predictions for all 840 completion outputs are in `available_predictions.jsonl`; `completion_attempts.jsonl` retains every attempt and its finish/transport status.
