@@ -26,3 +26,7 @@ Source dates are preserved as recorded, including nulls; this export does not fi
 `initial_reviews.jsonl` has two rows per request, marked `reviewer_1` and `reviewer_2`. These are anonymous review slots, not persistent person identities. Claim segmentation can differ between slots. Agreement therefore uses correctness, whole-answer fidelity, and matched required atoms, not forced claim-to-claim alignment.
 
 `final_labels.jsonl` preserves released semantic annotations and whether they came from agreement or adjudication. `answer_items.jsonl` contains protocol-adjusted metrics. Raw final labels and protocol-adjusted success rates are distinct: failures remain in the denominator, and certain failure statuses receive zero even when a semantic subjudgment is positive.
+
+## Example behind the correctness/completeness clarification
+
+The Dutch employment-information example in Section 6.1 is request `GHB-U-6e10b342e44a784b55aa6182` (Qwen3.8 Flash, designated evidence). Its existing adjudication marks all required atoms covered but the full answer incorrect because an additional change-notification claim omits statutory exceptions. The answer, original final rationale, and scores are in the three human result files joined by this request ID. No new judgment was introduced for the paper clarification.

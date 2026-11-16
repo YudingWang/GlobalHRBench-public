@@ -5,7 +5,7 @@
 Yuding Wang · [Farlinko](https://farlinko.com)  
 Yuhang Yao · Carnegie Mellon University
 
-[Read the paper](paper/GlobalHRBench.pdf) · [Dataset guide](docs/DATA.md) · [Evaluation and reproduction](docs/REPRODUCIBILITY.md) · [LaTeX source](paper/source/)
+[Release v2026.11.15](https://github.com/YudingWang/GlobalHRBench-public/releases/tag/v2026.11.15) · [Read the paper](paper/GlobalHRBench.pdf) · [Dataset guide](docs/DATA.md) · [Evaluation and reproduction](docs/REPRODUCIBILITY.md) · [LaTeX source](paper/source/)
 
 GlobalHRBench evaluates whether models answer employment-law questions correctly, preserve the conditions of the governing rule, and support their claims with the supplied evidence. It covers **501 questions across 8 jurisdictions and 6 languages**, with a **138-question reviewed core**.
 
