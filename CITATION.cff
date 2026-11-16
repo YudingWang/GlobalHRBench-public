@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Please cite the GlobalHRBench preprint when using this resource."
+title: "GlobalHRBench: Multilingual Employment-Law QA with Broad Model Evaluation and Deep Human Validation"
+type: software
+authors:
+  - family-names: Wang
+    given-names: Yuding
+    affiliation: Farlinko
+  - family-names: Yao
+    given-names: Yuhang
+    affiliation: Carnegie Mellon University
+version: "2026.11.15"
+date-released: 2026-11-15
+repository-code: "https://github.com/YudingWang/GlobalHRBench-public"
+url: "https://github.com/YudingWang/GlobalHRBench-public"

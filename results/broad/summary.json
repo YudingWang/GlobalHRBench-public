@@ -1,0 +1,1164 @@
+{
+  "retrieval_models": 14,
+  "evidence_models": 7,
+  "canonical_tasks": 60,
+  "retrieval_pairs": 840,
+  "evidence_outputs": 1260,
+  "source_groups": 5,
+  "retrieval_ordered": [
+    {
+      "model_id": "moonshotai/kimi-k2.5",
+      "display_name": "Kimi K2.5",
+      "n_pairs": 60,
+      "n_groups": 5,
+      "left": 0.5,
+      "right": 0.7166666666666667,
+      "question_difference": 0.21666666666666667,
+      "equal_group_difference": 0.20476190476190476,
+      "equal_group_interval": [
+        0.014285714285714285,
+        0.5047619047619047
+      ],
+      "wins": 13,
+      "ties": 47,
+      "losses": 0,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking.",
+      "bm25_equal_groups": 0.5131868131868131,
+      "routed_equal_groups": 0.717948717948718,
+      "alias_balanced_routed": 0.7166666666666667,
+      "score_tied_position": 1
+    },
+    {
+      "model_id": "google/gemini-3.6-flash",
+      "display_name": "Gemini 3.6 Flash",
+      "n_pairs": 60,
+      "n_groups": 5,
+      "left": 0.5166666666666667,
+      "right": 0.7,
+      "question_difference": 0.18333333333333332,
+      "equal_group_difference": 0.17399267399267399,
+      "equal_group_interval": [
+        -0.06153846153846154,
+        0.5476190476190476
+      ],
+      "wins": 13,
+      "ties": 45,
+      "losses": 2,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking.",
+      "bm25_equal_groups": 0.5285714285714286,
+      "routed_equal_groups": 0.7025641025641025,
+      "alias_balanced_routed": 0.7,
+      "score_tied_position": 2
+    },
+    {
+      "model_id": "gpt-6.1-sol",
+      "display_name": "GPT-6.1 Sol",
+      "n_pairs": 60,
+      "n_groups": 5,
+      "left": 0.5166666666666667,
+      "right": 0.6833333333333333,
+      "question_difference": 0.16666666666666666,
+      "equal_group_difference": 0.1586080586080586,
+      "equal_group_interval": [
+        -0.10512820512820516,
+        0.5476190476190476
+      ],
+      "wins": 13,
+      "ties": 44,
+      "losses": 3,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking.",
+      "bm25_equal_groups": 0.5285714285714286,
+      "routed_equal_groups": 0.6871794871794872,
+      "alias_balanced_routed": null,
+      "score_tied_position": 3
+    },
+    {
+      "model_id": "qwen/qwen3.8-flash",
+      "display_name": "Qwen 3.8 Flash",
+      "n_pairs": 60,
+      "n_groups": 5,
+      "left": 0.48333333333333334,
+      "right": 0.6666666666666666,
+      "question_difference": 0.18333333333333332,
+      "equal_group_difference": 0.17619047619047618,
+      "equal_group_interval": [
+        0.0,
+        0.46190476190476193
+      ],
+      "wins": 11,
+      "ties": 49,
+      "losses": 0,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking.",
+      "bm25_equal_groups": 0.4989010989010989,
+      "routed_equal_groups": 0.6750915750915751,
+      "alias_balanced_routed": 0.6666666666666666,
+      "score_tied_position": 4
+    },
+    {
+      "model_id": "qwen/qwen3.6-27b",
+      "display_name": "Qwen 3.6 27B",
+      "n_pairs": 60,
+      "n_groups": 5,
+      "left": 0.4166666666666667,
+      "right": 0.6666666666666666,
+      "question_difference": 0.25,
+      "equal_group_difference": 0.23663003663003662,
+      "equal_group_interval": [
+        0.09010989010989011,
+        0.47728937728937726
+      ],
+      "wins": 16,
+      "ties": 43,
+      "losses": 1,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking.",
+      "bm25_equal_groups": 0.43736263736263736,
+      "routed_equal_groups": 0.673992673992674,
+      "alias_balanced_routed": 0.6666666666666666,
+      "score_tied_position": 4
+    },
+    {
+      "model_id": "anthropic/claude-sonnet-5",
+      "display_name": "Claude Sonnet 5",
+      "n_pairs": 60,
+      "n_groups": 5,
+      "left": 0.45,
+      "right": 0.6,
+      "question_difference": 0.15,
+      "equal_group_difference": 0.14322344322344321,
+      "equal_group_interval": [
+        -0.12307692307692308,
+        0.5168498168498168
+      ],
+      "wins": 13,
+      "ties": 43,
+      "losses": 4,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking.",
+      "bm25_equal_groups": 0.46703296703296704,
+      "routed_equal_groups": 0.6102564102564102,
+      "alias_balanced_routed": 0.6,
+      "score_tied_position": 6
+    },
+    {
+      "model_id": "google/gemini-3.5-flash-lite",
+      "display_name": "Gemini 3.5 Flash-Lite",
+      "n_pairs": 60,
+      "n_groups": 5,
+      "left": 0.3,
+      "right": 0.4666666666666667,
+      "question_difference": 0.16666666666666666,
+      "equal_group_difference": 0.1619047619047619,
+      "equal_group_interval": [
+        -0.031474358974358733,
+        0.41904761904761906
+      ],
+      "wins": 16,
+      "ties": 38,
+      "losses": 6,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking.",
+      "bm25_equal_groups": 0.32967032967032966,
+      "routed_equal_groups": 0.4915750915750916,
+      "alias_balanced_routed": 0.4666666666666667,
+      "score_tied_position": 7
+    },
+    {
+      "model_id": "deepseek-v4.1-flash",
+      "display_name": "DeepSeek V4.1 Flash",
+      "n_pairs": 60,
+      "n_groups": 5,
+      "left": 0.4166666666666667,
+      "right": 0.45,
+      "question_difference": 0.03333333333333333,
+      "equal_group_difference": 0.03663003663003661,
+      "equal_group_interval": [
+        -0.36666666666666664,
+        0.4739926739926739
+      ],
+      "wins": 12,
+      "ties": 38,
+      "losses": 10,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking.",
+      "bm25_equal_groups": 0.43736263736263736,
+      "routed_equal_groups": 0.473992673992674,
+      "alias_balanced_routed": null,
+      "score_tied_position": 8
+    },
+    {
+      "model_id": "deepseek/deepseek-chat",
+      "display_name": "DeepSeek V3",
+      "n_pairs": 60,
+      "n_groups": 5,
+      "left": 0.36666666666666664,
+      "right": 0.4166666666666667,
+      "question_difference": 0.05,
+      "equal_group_difference": 0.0608058608058608,
+      "equal_group_interval": [
+        -0.16923076923076924,
+        0.24212454212454215
+      ],
+      "wins": 11,
+      "ties": 41,
+      "losses": 8,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking.",
+      "bm25_equal_groups": 0.389010989010989,
+      "routed_equal_groups": 0.44981684981684983,
+      "alias_balanced_routed": 0.4166666666666667,
+      "score_tied_position": 9
+    },
+    {
+      "model_id": "mistralai/mistral-large-4-0",
+      "display_name": "Mistral Large 4",
+      "n_pairs": 60,
+      "n_groups": 5,
+      "left": 0.31666666666666665,
+      "right": 0.4,
+      "question_difference": 0.08333333333333333,
+      "equal_group_difference": 0.07472527472527472,
+      "equal_group_interval": [
+        0.015384615384615385,
+        0.1340659340659341
+      ],
+      "wins": 8,
+      "ties": 49,
+      "losses": 3,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking.",
+      "bm25_equal_groups": 0.30915750915750917,
+      "routed_equal_groups": 0.38388278388278385,
+      "alias_balanced_routed": 0.41944444444444445,
+      "score_tied_position": 10
+    },
+    {
+      "model_id": "anthropic/claude-haiku-5.5",
+      "display_name": "Claude Haiku 5.5",
+      "n_pairs": 60,
+      "n_groups": 5,
+      "left": 0.3,
+      "right": 0.23333333333333334,
+      "question_difference": -0.06666666666666667,
+      "equal_group_difference": -0.06263736263736264,
+      "equal_group_interval": [
+        -0.2,
+        0.02857142857142857
+      ],
+      "wins": 8,
+      "ties": 40,
+      "losses": 12,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking.",
+      "bm25_equal_groups": 0.32967032967032966,
+      "routed_equal_groups": 0.26703296703296703,
+      "alias_balanced_routed": 0.23333333333333334,
+      "score_tied_position": 11
+    },
+    {
+      "model_id": "z-ai/glm-5",
+      "display_name": "GLM-5",
+      "n_pairs": 60,
+      "n_groups": 5,
+      "left": 0.16666666666666666,
+      "right": 0.23333333333333334,
+      "question_difference": 0.06666666666666667,
+      "equal_group_difference": 0.05494505494505495,
+      "equal_group_interval": [
+        -0.10879120879120881,
+        0.22967032967032966
+      ],
+      "wins": 10,
+      "ties": 44,
+      "losses": 6,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking.",
+      "bm25_equal_groups": 0.2065934065934066,
+      "routed_equal_groups": 0.26153846153846155,
+      "alias_balanced_routed": 0.23333333333333334,
+      "score_tied_position": 11
+    },
+    {
+      "model_id": "openai/gpt-4o-mini",
+      "display_name": "GPT-4o mini",
+      "n_pairs": 60,
+      "n_groups": 5,
+      "left": 0.16666666666666666,
+      "right": 0.2,
+      "question_difference": 0.03333333333333333,
+      "equal_group_difference": 0.04871794871794872,
+      "equal_group_interval": [
+        0.0,
+        0.11538461538461538
+      ],
+      "wins": 3,
+      "ties": 56,
+      "losses": 1,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking.",
+      "bm25_equal_groups": 0.2076923076923077,
+      "routed_equal_groups": 0.2564102564102564,
+      "alias_balanced_routed": 0.2,
+      "score_tied_position": 13
+    },
+    {
+      "model_id": "meta-llama/llama-3.1-8b-instruct",
+      "display_name": "Llama 3.1 8B",
+      "n_pairs": 60,
+      "n_groups": 5,
+      "left": 0.08333333333333333,
+      "right": 0.2,
+      "question_difference": 0.11666666666666667,
+      "equal_group_difference": 0.12234432234432235,
+      "equal_group_interval": [
+        0.04871794871794872,
+        0.18315018315018314
+      ],
+      "wins": 9,
+      "ties": 49,
+      "losses": 2,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking.",
+      "bm25_equal_groups": 0.11282051282051282,
+      "routed_equal_groups": 0.23516483516483516,
+      "alias_balanced_routed": 0.20416666666666666,
+      "score_tied_position": 13
+    }
+  ],
+  "retrieval_pooled": {
+    "n_pairs": 840,
+    "n_groups": 5,
+    "left": 0.35714285714285715,
+    "right": 0.4738095238095238,
+    "question_difference": 0.11666666666666667,
+    "equal_group_difference": 0.11363160648874934,
+    "equal_group_interval": [
+      -0.03430141287284145,
+      0.3276818419675562
+    ],
+    "wins": 156,
+    "ties": 626,
+    "losses": 58,
+    "bootstrap_replicates": 5000,
+    "bootstrap_seed": 31,
+    "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking."
+  },
+  "evidence_cells": [
+    {
+      "model_id": "anthropic/claude-sonnet-5",
+      "display_name": "Claude Sonnet 5",
+      "condition": "closed",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.5,
+          "equal_groups": 0.5234432234432235
+        },
+        "schema_valid": {
+          "question": 0.9666666666666667,
+          "equal_groups": 0.9692307692307692
+        },
+        "citation_precision": {
+          "question": 0.0,
+          "equal_groups": 0.0
+        },
+        "citation_recall": {
+          "question": 0.0,
+          "equal_groups": 0.0
+        },
+        "joint_success": {
+          "question": 0.5,
+          "equal_groups": 0.5234432234432235
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "anthropic/claude-sonnet-5",
+      "display_name": "Claude Sonnet 5",
+      "condition": "rag",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.43333333333333335,
+          "equal_groups": 0.45164835164835165
+        },
+        "schema_valid": {
+          "question": 0.9,
+          "equal_groups": 0.9087912087912088
+        },
+        "citation_precision": {
+          "question": 0.525,
+          "equal_groups": 0.5357142857142857
+        },
+        "citation_recall": {
+          "question": 0.5333333333333333,
+          "equal_groups": 0.5428571428571428
+        },
+        "joint_success": {
+          "question": 0.43333333333333335,
+          "equal_groups": 0.45164835164835165
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "anthropic/claude-sonnet-5",
+      "display_name": "Claude Sonnet 5",
+      "condition": "oracle",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.7,
+          "equal_groups": 0.7003663003663003
+        },
+        "schema_valid": {
+          "question": 0.9333333333333333,
+          "equal_groups": 0.9384615384615385
+        },
+        "citation_precision": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "citation_recall": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "joint_success": {
+          "question": 0.7,
+          "equal_groups": 0.7003663003663003
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "deepseek-v4.1-flash",
+      "display_name": "DeepSeek V4.1 Flash",
+      "condition": "closed",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.48333333333333334,
+          "equal_groups": 0.5102564102564102
+        },
+        "schema_valid": {
+          "question": 0.95,
+          "equal_groups": 0.9560439560439561
+        },
+        "citation_precision": {
+          "question": 0.0,
+          "equal_groups": 0.0
+        },
+        "citation_recall": {
+          "question": 0.0,
+          "equal_groups": 0.0
+        },
+        "joint_success": {
+          "question": 0.48333333333333334,
+          "equal_groups": 0.5102564102564102
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "deepseek-v4.1-flash",
+      "display_name": "DeepSeek V4.1 Flash",
+      "condition": "rag",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.35,
+          "equal_groups": 0.3758241758241758
+        },
+        "schema_valid": {
+          "question": 0.9666666666666667,
+          "equal_groups": 0.9692307692307692
+        },
+        "citation_precision": {
+          "question": 0.5333333333333333,
+          "equal_groups": 0.5428571428571428
+        },
+        "citation_recall": {
+          "question": 0.5333333333333333,
+          "equal_groups": 0.5428571428571428
+        },
+        "joint_success": {
+          "question": 0.35,
+          "equal_groups": 0.3758241758241758
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "deepseek-v4.1-flash",
+      "display_name": "DeepSeek V4.1 Flash",
+      "condition": "oracle",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.6666666666666666,
+          "equal_groups": 0.6717948717948717
+        },
+        "schema_valid": {
+          "question": 0.9,
+          "equal_groups": 0.9131868131868132
+        },
+        "citation_precision": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "citation_recall": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "joint_success": {
+          "question": 0.6666666666666666,
+          "equal_groups": 0.6717948717948717
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "google/gemini-3.5-flash-lite",
+      "display_name": "Gemini 3.5 Flash-Lite",
+      "condition": "closed",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.48333333333333334,
+          "equal_groups": 0.5069597069597069
+        },
+        "schema_valid": {
+          "question": 0.9833333333333333,
+          "equal_groups": 0.9666666666666667
+        },
+        "citation_precision": {
+          "question": 0.0,
+          "equal_groups": 0.0
+        },
+        "citation_recall": {
+          "question": 0.0,
+          "equal_groups": 0.0
+        },
+        "joint_success": {
+          "question": 0.48333333333333334,
+          "equal_groups": 0.5069597069597069
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "google/gemini-3.5-flash-lite",
+      "display_name": "Gemini 3.5 Flash-Lite",
+      "condition": "rag",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.3333333333333333,
+          "equal_groups": 0.36043956043956044
+        },
+        "schema_valid": {
+          "question": 0.9833333333333333,
+          "equal_groups": 0.9846153846153847
+        },
+        "citation_precision": {
+          "question": 0.5333333333333333,
+          "equal_groups": 0.5428571428571428
+        },
+        "citation_recall": {
+          "question": 0.5333333333333333,
+          "equal_groups": 0.5428571428571428
+        },
+        "joint_success": {
+          "question": 0.3333333333333333,
+          "equal_groups": 0.36043956043956044
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "google/gemini-3.5-flash-lite",
+      "display_name": "Gemini 3.5 Flash-Lite",
+      "condition": "oracle",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.6833333333333333,
+          "equal_groups": 0.6860805860805861
+        },
+        "schema_valid": {
+          "question": 0.9333333333333333,
+          "equal_groups": 0.9238095238095239
+        },
+        "citation_precision": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "citation_recall": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "joint_success": {
+          "question": 0.6833333333333333,
+          "equal_groups": 0.6860805860805861
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "gpt-6.1-sol",
+      "display_name": "GPT-6.1 Sol",
+      "condition": "closed",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.31666666666666665,
+          "equal_groups": 0.3619047619047619
+        },
+        "schema_valid": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "citation_precision": {
+          "question": 0.0,
+          "equal_groups": 0.0
+        },
+        "citation_recall": {
+          "question": 0.0,
+          "equal_groups": 0.0
+        },
+        "joint_success": {
+          "question": 0.31666666666666665,
+          "equal_groups": 0.3619047619047619
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "gpt-6.1-sol",
+      "display_name": "GPT-6.1 Sol",
+      "condition": "rag",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.5166666666666667,
+          "equal_groups": 0.5285714285714286
+        },
+        "schema_valid": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "citation_precision": {
+          "question": 0.5333333333333333,
+          "equal_groups": 0.5428571428571428
+        },
+        "citation_recall": {
+          "question": 0.5333333333333333,
+          "equal_groups": 0.5428571428571428
+        },
+        "joint_success": {
+          "question": 0.5166666666666667,
+          "equal_groups": 0.5285714285714286
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "gpt-6.1-sol",
+      "display_name": "GPT-6.1 Sol",
+      "condition": "oracle",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.7,
+          "equal_groups": 0.7014652014652014
+        },
+        "schema_valid": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "citation_precision": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "citation_recall": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "joint_success": {
+          "question": 0.7,
+          "equal_groups": 0.7014652014652014
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "meta-llama/llama-3.1-8b-instruct",
+      "display_name": "Llama 3.1 8B",
+      "condition": "closed",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.1,
+          "equal_groups": 0.12490842490842491
+        },
+        "schema_valid": {
+          "question": 0.95,
+          "equal_groups": 0.9538461538461539
+        },
+        "citation_precision": {
+          "question": 0.0,
+          "equal_groups": 0.0
+        },
+        "citation_recall": {
+          "question": 0.0,
+          "equal_groups": 0.0
+        },
+        "joint_success": {
+          "question": 0.03333333333333333,
+          "equal_groups": 0.06666666666666667
+        },
+        "jurisdiction_ok": {
+          "question": 0.9833333333333333,
+          "equal_groups": 0.9846153846153847
+        }
+      }
+    },
+    {
+      "model_id": "meta-llama/llama-3.1-8b-instruct",
+      "display_name": "Llama 3.1 8B",
+      "condition": "rag",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.15,
+          "equal_groups": 0.19230769230769232
+        },
+        "schema_valid": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "citation_precision": {
+          "question": 0.5166666666666667,
+          "equal_groups": 0.5274725274725275
+        },
+        "citation_recall": {
+          "question": 0.5166666666666667,
+          "equal_groups": 0.5274725274725275
+        },
+        "joint_success": {
+          "question": 0.05,
+          "equal_groups": 0.1
+        },
+        "jurisdiction_ok": {
+          "question": 0.8,
+          "equal_groups": 0.8095238095238095
+        }
+      }
+    },
+    {
+      "model_id": "meta-llama/llama-3.1-8b-instruct",
+      "display_name": "Llama 3.1 8B",
+      "condition": "oracle",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.21666666666666667,
+          "equal_groups": 0.21245421245421245
+        },
+        "schema_valid": {
+          "question": 0.9833333333333333,
+          "equal_groups": 0.9666666666666667
+        },
+        "citation_precision": {
+          "question": 0.9166666666666666,
+          "equal_groups": 0.9062271062271062
+        },
+        "citation_recall": {
+          "question": 0.9166666666666666,
+          "equal_groups": 0.9062271062271062
+        },
+        "joint_success": {
+          "question": 0.016666666666666666,
+          "equal_groups": 0.03333333333333333
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "openai/gpt-4o-mini",
+      "display_name": "GPT-4o mini",
+      "condition": "closed",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.08333333333333333,
+          "equal_groups": 0.14761904761904762
+        },
+        "schema_valid": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "citation_precision": {
+          "question": 0.0,
+          "equal_groups": 0.0
+        },
+        "citation_recall": {
+          "question": 0.0,
+          "equal_groups": 0.0
+        },
+        "joint_success": {
+          "question": 0.06666666666666667,
+          "equal_groups": 0.13333333333333333
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "openai/gpt-4o-mini",
+      "display_name": "GPT-4o mini",
+      "condition": "rag",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.16666666666666666,
+          "equal_groups": 0.2076923076923077
+        },
+        "schema_valid": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "citation_precision": {
+          "question": 0.525,
+          "equal_groups": 0.5357142857142857
+        },
+        "citation_recall": {
+          "question": 0.5333333333333333,
+          "equal_groups": 0.5428571428571428
+        },
+        "joint_success": {
+          "question": 0.05,
+          "equal_groups": 0.1
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "openai/gpt-4o-mini",
+      "display_name": "GPT-4o mini",
+      "condition": "oracle",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.15,
+          "equal_groups": 0.21025641025641026
+        },
+        "schema_valid": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "citation_precision": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "citation_recall": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "joint_success": {
+          "question": 0.05,
+          "equal_groups": 0.1
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "qwen/qwen3.8-flash",
+      "display_name": "Qwen 3.8 Flash",
+      "condition": "closed",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.4166666666666667,
+          "equal_groups": 0.452014652014652
+        },
+        "schema_valid": {
+          "question": 0.8166666666666667,
+          "equal_groups": 0.8395604395604396
+        },
+        "citation_precision": {
+          "question": 0.0,
+          "equal_groups": 0.0
+        },
+        "citation_recall": {
+          "question": 0.0,
+          "equal_groups": 0.0
+        },
+        "joint_success": {
+          "question": 0.4166666666666667,
+          "equal_groups": 0.452014652014652
+        },
+        "jurisdiction_ok": {
+          "question": 0.8166666666666667,
+          "equal_groups": 0.8395604395604396
+        }
+      }
+    },
+    {
+      "model_id": "qwen/qwen3.8-flash",
+      "display_name": "Qwen 3.8 Flash",
+      "condition": "rag",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.48333333333333334,
+          "equal_groups": 0.4989010989010989
+        },
+        "schema_valid": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        },
+        "citation_precision": {
+          "question": 0.5333333333333333,
+          "equal_groups": 0.5428571428571428
+        },
+        "citation_recall": {
+          "question": 0.5333333333333333,
+          "equal_groups": 0.5428571428571428
+        },
+        "joint_success": {
+          "question": 0.48333333333333334,
+          "equal_groups": 0.4989010989010989
+        },
+        "jurisdiction_ok": {
+          "question": 1.0,
+          "equal_groups": 1.0
+        }
+      }
+    },
+    {
+      "model_id": "qwen/qwen3.8-flash",
+      "display_name": "Qwen 3.8 Flash",
+      "condition": "oracle",
+      "n_outputs": 60,
+      "metrics": {
+        "correct": {
+          "question": 0.7,
+          "equal_groups": 0.7047619047619047
+        },
+        "schema_valid": {
+          "question": 0.9333333333333333,
+          "equal_groups": 0.9428571428571428
+        },
+        "citation_precision": {
+          "question": 0.9333333333333333,
+          "equal_groups": 0.9428571428571428
+        },
+        "citation_recall": {
+          "question": 0.9333333333333333,
+          "equal_groups": 0.9428571428571428
+        },
+        "joint_success": {
+          "question": 0.7,
+          "equal_groups": 0.7047619047619047
+        },
+        "jurisdiction_ok": {
+          "question": 0.9333333333333333,
+          "equal_groups": 0.9428571428571428
+        }
+      }
+    }
+  ],
+  "evidence_pooled": [
+    {
+      "condition": "closed",
+      "n_outputs": 420,
+      "target_answer_score": 0.3404761904761905
+    },
+    {
+      "condition": "rag",
+      "n_outputs": 420,
+      "target_answer_score": 0.3476190476190476
+    },
+    {
+      "condition": "oracle",
+      "n_outputs": 420,
+      "target_answer_score": 0.5452380952380952
+    }
+  ],
+  "evidence_paired": [
+    {
+      "left_condition": "closed",
+      "right_condition": "rag",
+      "n_pairs": 420,
+      "n_groups": 5,
+      "left": 0.3404761904761905,
+      "right": 0.3476190476190476,
+      "question_difference": 0.007142857142857143,
+      "equal_group_difference": -0.0016745159602302496,
+      "equal_group_interval": [
+        -0.15578231292517009,
+        0.1524332810047096
+      ],
+      "wins": 54,
+      "ties": 315,
+      "losses": 51,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking."
+    },
+    {
+      "left_condition": "rag",
+      "right_condition": "oracle",
+      "n_pairs": 420,
+      "n_groups": 5,
+      "left": 0.3476190476190476,
+      "right": 0.5452380952380952,
+      "question_difference": 0.1976190476190476,
+      "equal_group_difference": 0.18168498168498165,
+      "equal_group_interval": [
+        0.041758241758241756,
+        0.4231292517006803
+      ],
+      "wins": 102,
+      "ties": 299,
+      "losses": 19,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking."
+    },
+    {
+      "left_condition": "closed",
+      "right_condition": "oracle",
+      "n_pairs": 420,
+      "n_groups": 5,
+      "left": 0.3404761904761905,
+      "right": 0.5452380952380952,
+      "question_difference": 0.20476190476190476,
+      "equal_group_difference": 0.18001046572475143,
+      "equal_group_interval": [
+        0.03851386708529566,
+        0.3215070643642072
+      ],
+      "wins": 100,
+      "ties": 306,
+      "losses": 14,
+      "bootstrap_replicates": 5000,
+      "bootstrap_seed": 31,
+      "interpretation": "Descriptive source-group bootstrap, models fixed; not population/model significance ranking."
+    }
+  ],
+  "evidence_slices": [
+    {
+      "hit": true,
+      "condition": "closed",
+      "n_tasks": 32,
+      "n_outputs": 224,
+      "score": 0.5
+    },
+    {
+      "hit": true,
+      "condition": "rag",
+      "n_tasks": 32,
+      "n_outputs": 224,
+      "score": 0.6517857142857143
+    },
+    {
+      "hit": true,
+      "condition": "oracle",
+      "n_tasks": 32,
+      "n_outputs": 224,
+      "score": 0.7098214285714286
+    },
+    {
+      "hit": false,
+      "condition": "closed",
+      "n_tasks": 28,
+      "n_outputs": 196,
+      "score": 0.15816326530612246
+    },
+    {
+      "hit": false,
+      "condition": "rag",
+      "n_tasks": 28,
+      "n_outputs": 196,
+      "score": 0.0
+    },
+    {
+      "hit": false,
+      "condition": "oracle",
+      "n_tasks": 28,
+      "n_outputs": 196,
+      "score": 0.35714285714285715
+    }
+  ],
+  "positive_routing_models": 13,
+  "unchanged_resource_wide_cohort": "Five original models on 423 tasks; new models evaluated on matched 60-task primary cohort.",
+  "native_configuration": "GPT-6.1 Sol uses reasoning_effort=low and omits temperature/top_p in accordance with its native interface. This is an implementation setting, not a stated study limitation."
+}

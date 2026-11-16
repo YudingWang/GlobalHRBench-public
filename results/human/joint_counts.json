@@ -1,0 +1,122 @@
+[
+  {
+    "model_id": "openai/gpt-4.1-mini",
+    "model_name": "GPT-4.1 mini",
+    "arm": "C",
+    "condition": "public_cue_bm25_top5",
+    "n": 138,
+    "counts": {
+      "full_supported": 84,
+      "full_unsupported": 5,
+      "full_other": 0,
+      "incomplete_supported": 19,
+      "incomplete_unsupported": 26,
+      "incomplete_other": 4
+    }
+  },
+  {
+    "model_id": "openai/gpt-4.1-mini",
+    "model_name": "GPT-4.1 mini",
+    "arm": "D",
+    "condition": "gold_designated_evidence",
+    "n": 138,
+    "counts": {
+      "full_supported": 97,
+      "full_unsupported": 8,
+      "full_other": 2,
+      "incomplete_supported": 15,
+      "incomplete_unsupported": 15,
+      "incomplete_other": 1
+    }
+  },
+  {
+    "model_id": "qwen/qwen3.8-flash",
+    "model_name": "Qwen3.8 Flash",
+    "arm": "C",
+    "condition": "public_cue_bm25_top5",
+    "n": 138,
+    "counts": {
+      "full_supported": 77,
+      "full_unsupported": 20,
+      "full_other": 0,
+      "incomplete_supported": 15,
+      "incomplete_unsupported": 20,
+      "incomplete_other": 6
+    }
+  },
+  {
+    "model_id": "qwen/qwen3.8-flash",
+    "model_name": "Qwen3.8 Flash",
+    "arm": "D",
+    "condition": "gold_designated_evidence",
+    "n": 138,
+    "counts": {
+      "full_supported": 109,
+      "full_unsupported": 17,
+      "full_other": 1,
+      "incomplete_supported": 4,
+      "incomplete_unsupported": 7,
+      "incomplete_other": 0
+    }
+  },
+  {
+    "model_id": "gpt-6.1-sol",
+    "model_name": "GPT-6.1 Sol",
+    "arm": "C",
+    "condition": "public_cue_bm25_top5",
+    "n": 138,
+    "counts": {
+      "full_supported": 109,
+      "full_unsupported": 6,
+      "full_other": 0,
+      "incomplete_supported": 16,
+      "incomplete_unsupported": 0,
+      "incomplete_other": 7
+    }
+  },
+  {
+    "model_id": "gpt-6.1-sol",
+    "model_name": "GPT-6.1 Sol",
+    "arm": "D",
+    "condition": "gold_designated_evidence",
+    "n": 138,
+    "counts": {
+      "full_supported": 130,
+      "full_unsupported": 7,
+      "full_other": 0,
+      "incomplete_supported": 0,
+      "incomplete_unsupported": 0,
+      "incomplete_other": 1
+    }
+  },
+  {
+    "model_id": "deepseek-v4.1-flash",
+    "model_name": "DeepSeek V4.1 Flash",
+    "arm": "C",
+    "condition": "public_cue_bm25_top5",
+    "n": 138,
+    "counts": {
+      "full_supported": 82,
+      "full_unsupported": 20,
+      "full_other": 5,
+      "incomplete_supported": 2,
+      "incomplete_unsupported": 24,
+      "incomplete_other": 5
+    }
+  },
+  {
+    "model_id": "deepseek-v4.1-flash",
+    "model_name": "DeepSeek V4.1 Flash",
+    "arm": "D",
+    "condition": "gold_designated_evidence",
+    "n": 138,
+    "counts": {
+      "full_supported": 100,
+      "full_unsupported": 21,
+      "full_other": 4,
+      "incomplete_supported": 3,
+      "incomplete_unsupported": 10,
+      "incomplete_other": 0
+    }
+  }
+]

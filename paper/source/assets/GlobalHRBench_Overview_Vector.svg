@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1614" height="916" viewBox="0 0 1614 916" role="img">
+<defs>
+<linearGradient id="lavender" x1="0" y1="0" x2="0.7" y2="1"><stop offset="0" stop-color="#ded9fb"/><stop offset=".48" stop-color="#efebff"/><stop offset="1" stop-color="#c9c9f2"/></linearGradient>
+<linearGradient id="lilac" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e5ddf9"/><stop offset=".52" stop-color="#ebe9fc"/><stop offset="1" stop-color="#cfcaf8"/></linearGradient>
+<linearGradient id="blueTitle" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c3e0ff"/><stop offset="1" stop-color="#b1d2f5"/></linearGradient>
+<linearGradient id="blueBubble" x1="0" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#dff4ff"/><stop offset="1" stop-color="#cdeaff"/></linearGradient>
+<linearGradient id="pinkBubble" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffdbdf"/><stop offset="1" stop-color="#fac9d5"/></linearGradient>
+<linearGradient id="orangeTitle" x1="0" y1="0" x2=".2" y2="1"><stop offset="0" stop-color="#fff3cf"/><stop offset="1" stop-color="#ffdfb3"/></linearGradient>
+<linearGradient id="amber" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff8d9"/><stop offset="1" stop-color="#fff0c0"/></linearGradient>
+<linearGradient id="silver" x1="0" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#e4e4e4"/><stop offset=".7" stop-color="#f4f4f5"/><stop offset="1" stop-color="#dddddf"/></linearGradient>
+<linearGradient id="greenBar" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e7f7df"/><stop offset="1" stop-color="#d7f4d8"/></linearGradient>
+<linearGradient id="redBar" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe1e4"/><stop offset="1" stop-color="#ffcdd0"/></linearGradient>
+<linearGradient id="paleBlueCard" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6fcff"/><stop offset="1" stop-color="#e6f2ff"/></linearGradient>
+<linearGradient id="footerGreen" x1="0" y1="0" x2="1" y2=".5"><stop offset="0" stop-color="#ecf8e5"/><stop offset="1" stop-color="#f9ffef"/></linearGradient>
+<filter id="softShadow" x="-10%" y="-10%" width="120%" height="125%"><feGaussianBlur in="SourceAlpha" stdDeviation="1.3"/><feOffset dy="1"/><feComponentTransfer><feFuncA type="linear" slope=".08"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<title>GlobalHRBench: Connecting HR compliance risks to model evaluation</title>
+<desc>A why/how infographic relating HR compliance risks to broad automated tests and deep human review using separate correctness, rule-completeness and source-fidelity metrics.</desc>
+<rect x="0" y="0" width="1614" height="916" rx="0" fill="white" stroke="none" stroke-width="1" />
+<rect x="34" y="34" width="1550" height="58" rx="20" fill="url(#lavender)" stroke="none" stroke-width="1" />
+<text x="808" y="72" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="43" font-weight="700" font-style="normal" fill="#101016" text-anchor="middle" >GlobalHRBench: Connecting HR compliance risks to model evaluation</text>
+<rect x="33" y="109" width="659" height="66" rx="21" fill="url(#blueTitle)" stroke="none" stroke-width="1" />
+<text x="363" y="158" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="38" font-weight="700" font-style="normal" fill="#101016" text-anchor="middle" >WHY  Practice-driven concerns</text>
+<rect x="740" y="109" width="844" height="66" rx="21" fill="url(#blueTitle)" stroke="none" stroke-width="1" />
+<text x="1160" y="158" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="38" font-weight="700" font-style="normal" fill="#101016" text-anchor="middle" >HOW  Benchmark design</text>
+<line x1="715" y1="111" x2="715" y2="789" stroke="#1b2b34" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 10"/>
+<circle cx="135" cy="330" r="91" fill="none" stroke="#9ddcfc" stroke-width="4" />
+<ellipse cx="135" cy="330" rx="46" ry="91" fill="none" stroke="#9ddcfc" stroke-width="3" />
+<line x1="44" y1="330" x2="225" y2="330" stroke="#9ddcfc" stroke-width="3" stroke-linecap="round" />
+<path d="M 64 278 Q 134 308 206 278 M 58 386 Q 135 349 216 387" fill="none" stroke="#9ddcfc" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="171" y="234" width="76" height="82" rx="8" fill="#f8fdff" stroke="#163c54" stroke-width="4" />
+<line x1="187" y1="261" x2="231" y2="261" stroke="#98d0ef" stroke-width="4" stroke-linecap="round" />
+<line x1="187" y1="276" x2="238" y2="276" stroke="#98d0ef" stroke-width="4" stroke-linecap="round" />
+<line x1="187" y1="291" x2="224" y2="291" stroke="#98d0ef" stroke-width="4" stroke-linecap="round" />
+<circle cx="246" cy="317" r="21" fill="white" stroke="#f41c2a" stroke-width="3" />
+<text x="246" y="328" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="30" font-weight="700" font-style="normal" fill="#d81522" text-anchor="middle" >?</text>
+<path d="M 72 450 V 432 Q 75 405 102 401 H 156 Q 183 402 191 425 V 469 H 72 Z" fill="#a1e6ff" stroke="#163c54" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" />
+<ellipse cx="130" cy="399" rx="30" ry="33" fill="#fff6db" stroke="#163c54" stroke-width="3" />
+<path d="M 101 397 Q 99 365 124 364 Q 152 358 159 395 Q 141 387 129 376 Q 119 389 102 390 Z" fill="#34566c" stroke="#163c54" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 120 434 L 132 444 L 144 434" fill="none" stroke="white" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 188 422 H 254 Q 262 422 258 433 L 248 470 H 181 Z" fill="#c6edff" stroke="#163c54" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="218" cy="450" r="4" fill="#116d9b" stroke="#163c54" stroke-width="1" />
+<line x1="149" y1="473" x2="270" y2="473" stroke="#163c54" stroke-width="3.5" stroke-linecap="round" />
+<text x="146" y="511" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="28" font-weight="700" font-style="normal" fill="#101016" text-anchor="middle" >HR workflow</text>
+<text x="147" y="543" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="24" font-weight="400" font-style="normal" fill="#163a67" text-anchor="middle" ><tspan x="147" dy="0">Cross-border HR</tspan><tspan x="147" dy="28">compliance QA.</tspan></text>
+<rect x="286" y="190" width="406" height="82" rx="18" fill="url(#paleBlueCard)" stroke="#a9d6fe" stroke-width="1.7" />
+<g transform="translate(307,199) scale(0.8783783783783784)" >
+<circle cx="37" cy="37" r="29" fill="none" stroke="#006892" stroke-width="3" />
+<ellipse cx="37" cy="37" rx="13" ry="29" fill="none" stroke="#006892" stroke-width="2.5" />
+<line x1="8" y1="37" x2="66" y2="37" stroke="#006892" stroke-width="2.5" stroke-linecap="round" />
+<path d="M 15 21 Q 37 32 59 21 M 15 53 Q 37 43 59 53" fill="none" stroke="#006892" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" />
+</g>
+<text x="394" y="224" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="29" font-weight="700" font-style="normal" fill="#101016" text-anchor="start" >Wrong jurisdiction</text>
+<text x="395" y="256" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="25" font-weight="400" font-style="normal" fill="#101016" text-anchor="start" >Incorrect governing law</text>
+<rect x="286" y="289" width="406" height="82" rx="18" fill="url(#paleBlueCard)" stroke="#a9d6fe" stroke-width="1.7" />
+<ellipse cx="335.0" cy="330.0" rx="25.0" ry="25.0" fill="white" stroke="#fc1e20" stroke-width="3" />
+<path d="M 323.66 318.66 L 346.88 341.88 M 346.88 318.66 L 323.66 341.88" fill="none" stroke="#fc171e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
+<text x="394" y="323" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="29" font-weight="700" font-style="normal" fill="#101016" text-anchor="start" >Incorrect answer</text>
+<text x="395" y="355" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="25" font-weight="400" font-style="normal" fill="#101016" text-anchor="start" >Incorrect entitlement</text>
+<rect x="286" y="388" width="406" height="82" rx="18" fill="url(#paleBlueCard)" stroke="#a9d6fe" stroke-width="1.7" />
+<rect x="314" y="405" width="49" height="49" rx="6" fill="white" stroke="#06b05b" stroke-width="3" />
+<path d="M 322.57 429.5 L 333.19 439.53 L 358.56 414.16" fill="none" stroke="#00b84c" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" />
+<text x="394" y="422" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="29" font-weight="700" font-style="normal" fill="#101016" text-anchor="start" >Missing conditions</text>
+<text x="395" y="454" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="25" font-weight="400" font-style="normal" fill="#101016" text-anchor="start" >Omitted legal conditions</text>
+<rect x="286" y="487" width="406" height="82" rx="18" fill="url(#paleBlueCard)" stroke="#a9d6fe" stroke-width="1.7" />
+<g transform="translate(310,499) scale(0.921875)" >
+<path d="M 7 2 H 44 L 57 15 V 61 H 7 Q 4 61 4 57 V 6 Q 4 2 7 2 Z" fill="white" stroke="#005e87" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 44 3 V 15 H 56" fill="none" stroke="#005e87" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+<line x1="15" y1="24" x2="46" y2="24" stroke="#005e87" stroke-width="3" stroke-linecap="round" />
+<line x1="15" y1="34" x2="46" y2="34" stroke="#005e87" stroke-width="3" stroke-linecap="round" />
+<line x1="15" y1="44" x2="46" y2="44" stroke="#005e87" stroke-width="3" stroke-linecap="round" />
+</g>
+<circle cx="360.15" cy="541.48" r="12.389999999999999" fill="white" stroke="#f32627" stroke-width="3" />
+<line x1="352.48" y1="541.48" x2="367.82" y2="541.48" stroke="#f32627" stroke-width="3" stroke-linecap="round" />
+<text x="394" y="521" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="29" font-weight="700" font-style="normal" fill="#101016" text-anchor="start" >Unsupported claims</text>
+<text x="395" y="553" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="25" font-weight="400" font-style="normal" fill="#101016" text-anchor="start" >Not supported in packet</text>
+<line x1="397" y1="583" x2="397" y2="608" stroke="#003d6c" stroke-width="3.3" stroke-linecap="round" />
+<path d="M 388 600 L 397 610 L 406 600" fill="none" stroke="#003d6c" stroke-width="3.3" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="46" y="632" width="646" height="126" rx="23" fill="url(#pinkBubble)" stroke="#ffbdca" stroke-width="1.2" />
+<g transform="translate(90,656) scale(1.0222222222222221)" >
+<circle cx="45" cy="6" r="5" fill="#d8edfc" stroke="#163c54" stroke-width="3" />
+<line x1="45" y1="12" x2="45" y2="69" stroke="#163c54" stroke-width="3.4" stroke-linecap="round" />
+<path d="M 14 28 Q 45 17 76 28" fill="none" stroke="#163c54" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round" />
+<line x1="14" y1="28" x2="14" y2="37" stroke="#163c54" stroke-width="2.5" stroke-linecap="round" />
+<line x1="76" y1="28" x2="76" y2="37" stroke="#163c54" stroke-width="2.5" stroke-linecap="round" />
+<line x1="14" y1="28" x2="1" y2="60" stroke="#163c54" stroke-width="2.5" stroke-linecap="round" />
+<line x1="14" y1="28" x2="27" y2="60" stroke="#163c54" stroke-width="2.5" stroke-linecap="round" />
+<line x1="76" y1="28" x2="63" y2="60" stroke="#163c54" stroke-width="2.5" stroke-linecap="round" />
+<line x1="76" y1="28" x2="89" y2="60" stroke="#163c54" stroke-width="2.5" stroke-linecap="round" />
+<path d="M 1 59 Q 3 75 14 75 Q 25 75 27 59 Z" fill="#ffc437" stroke="#163c54" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 63 59 Q 65 75 76 75 Q 87 75 89 59 Z" fill="#ffc437" stroke="#163c54" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 45 68 V 83 M 31 84 H 59" fill="none" stroke="#163c54" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
+</g>
+<text x="222" y="668" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="29" font-weight="700" font-style="normal" fill="#101016" text-anchor="start" ><tspan x="222" dy="0">HR compliance QA requires</tspan><tspan x="222" dy="32">answers that are correct, complete,</tspan><tspan x="222" dy="32">and supported by sources.</tspan></text>
+<rect x="742" y="190" width="842" height="92" rx="20" fill="url(#amber)" stroke="#ffd35f" stroke-width="1.3" />
+<g transform="translate(767,201) scale(0.9857142857142858)" >
+<rect x="5" y="12" width="58" height="48" rx="0" fill="#b9e8ff" stroke="#163c54" stroke-width="3" />
+<ellipse cx="34" cy="12" rx="29" ry="10" fill="#d9f4ff" stroke="#163c54" stroke-width="3" />
+<path d="M 5 28 Q 34 47 63 28 M 5 45 Q 34 63 63 45" fill="none" stroke="#163c54" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 5 12 V 56 Q 34 73 63 56 V 12" fill="none" stroke="#163c54" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+</g>
+<circle cx="836" cy="252" r="21" fill="#fff6f8" stroke="#fa182b" stroke-width="3" />
+<path d="M 827 261 L 845 243 M 833 243 H 845 V 255" fill="none" stroke="#e11220" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="882" y="229" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="40" font-weight="700" font-style="normal" fill="#101016" text-anchor="start" >GlobalHRBench</text>
+<text x="884" y="267" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="27" font-weight="400" font-style="normal" fill="#101016" text-anchor="start" >501 questions · 138 reviewed core</text>
+<line x1="1305" y1="202" x2="1305" y2="270" stroke="#999b94" stroke-width="2" stroke-linecap="round" />
+<text x="1442" y="227" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="27" font-weight="400" font-style="normal" fill="#101016" text-anchor="middle" ><tspan x="1442" dy="0">8 jurisdictions</tspan><tspan x="1442" dy="33">6 languages</tspan></text>
+<line x1="1135" y1="284" x2="1135" y2="305" stroke="#163c54" stroke-width="2.6" stroke-linecap="round" />
+<line x1="933" y1="305" x2="1349" y2="305" stroke="#163c54" stroke-width="2.6" stroke-linecap="round" />
+<line x1="933" y1="305" x2="933" y2="331" stroke="#163c54" stroke-width="2.6" stroke-linecap="round" />
+<line x1="1349" y1="305" x2="1349" y2="331" stroke="#163c54" stroke-width="2.6" stroke-linecap="round" />
+<rect x="742" y="330" width="376" height="220" rx="19" fill="white" stroke="#a9d4ff" stroke-width="1.7" />
+<rect x="742" y="330" width="376" height="62" rx="19" fill="url(#blueTitle)" stroke="#a9d4ff" stroke-width="1.5" />
+<rect x="743" y="371" width="374" height="21" rx="0" fill="url(#blueTitle)" stroke="none" stroke-width="1" />
+<g transform="translate(781,336) scale(0.8787878787878788)" >
+<path d="M 7 43 L 33 30 L 59 43 L 33 57 Z" fill="#64c4f5" stroke="#163c54" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 7 33 L 33 20 L 59 33 L 33 47 Z" fill="#64c4f5" stroke="#163c54" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 7 23 L 33 10 L 59 23 L 33 37 Z" fill="#64c4f5" stroke="#163c54" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+</g>
+<text x="879" y="374" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="39" font-weight="700" font-style="normal" fill="#101016" text-anchor="start" >BROAD</text>
+<circle cx="774" cy="412" r="5.5" fill="#04a9ec" stroke="#04a9ec" stroke-width="1" />
+<text x="797" y="419" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="25.5" font-weight="400" font-style="normal" fill="#101016" text-anchor="start" >14-model retrieval study</text>
+<circle cx="774" cy="448" r="5.5" fill="#04a9ec" stroke="#04a9ec" stroke-width="1" />
+<text x="797" y="455" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="25.5" font-weight="400" font-style="normal" fill="#101016" text-anchor="start" >7-model evidence access</text>
+<circle cx="774" cy="484" r="5.5" fill="#04a9ec" stroke="#04a9ec" stroke-width="1" />
+<text x="797" y="491" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="25.5" font-weight="400" font-style="normal" fill="#101016" text-anchor="start" >60 canonical tasks</text>
+<circle cx="774" cy="520" r="5.5" fill="#04a9ec" stroke="#04a9ec" stroke-width="1" />
+<text x="797" y="527" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="25.5" font-weight="400" font-style="normal" fill="#101016" text-anchor="start" >Automated answer scores</text>
+<rect x="1142" y="330" width="441" height="220" rx="19" fill="white" stroke="#a9d4ff" stroke-width="1.7" />
+<rect x="1142" y="330" width="441" height="62" rx="19" fill="url(#blueTitle)" stroke="#a9d4ff" stroke-width="1.5" />
+<rect x="1143" y="371" width="439" height="21" rx="0" fill="url(#blueTitle)" stroke="none" stroke-width="1" />
+<g transform="translate(1170,335) scale(0.9178082191780822)" >
+<circle cx="25" cy="22" r="11" fill="#b5e6fd" stroke="#163c54" stroke-width="3" />
+<circle cx="52" cy="22" r="10" fill="#b5e6fd" stroke="#163c54" stroke-width="3" />
+<path d="M 5 65 V 53 Q 6 36 25 36 Q 45 36 45 53 V 65 M 35 42 Q 48 32 60 40 Q 70 47 70 64" fill="none" stroke="#163c54" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+</g>
+<text x="1295" y="374" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="39" font-weight="700" font-style="normal" fill="#101016" text-anchor="start" >DEEP</text>
+<circle cx="1187" cy="412" r="5.5" fill="#009b99" stroke="#009b99" stroke-width="1" />
+<text x="1210" y="419" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="25.5" font-weight="400" font-style="normal" fill="#101016" text-anchor="start" >138 tasks · 4 models</text>
+<circle cx="1187" cy="448" r="5.5" fill="#009b99" stroke="#009b99" stroke-width="1" />
+<text x="1210" y="455" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="25.5" font-weight="400" font-style="normal" fill="#101016" text-anchor="start" >1104 model outputs</text>
+<circle cx="1187" cy="484" r="5.5" fill="#009b99" stroke="#009b99" stroke-width="1" />
+<text x="1210" y="491" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="25.5" font-weight="400" font-style="normal" fill="#101016" text-anchor="start" >2 independent blind reviews</text>
+<circle cx="1187" cy="520" r="5.5" fill="#009b99" stroke="#009b99" stroke-width="1" />
+<text x="1210" y="527" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="25.5" font-weight="400" font-style="normal" fill="#101016" text-anchor="start" >Disagreements adjudicated</text>
+<line x1="1135" y1="555" x2="1135" y2="571" stroke="#003d6c" stroke-width="3.2" stroke-linecap="round" />
+<path d="M 1126 563 L 1135 573 L 1144 563" fill="none" stroke="#003d6c" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="742" y="591" width="842" height="170" rx="20" fill="#fff7df" stroke="#ffcf51" stroke-width="1.4" />
+<rect x="742" y="591" width="842" height="67" rx="20" fill="url(#amber)" stroke="none" stroke-width="1" />
+<rect x="742" y="631" width="842" height="35" rx="0" fill="url(#amber)" stroke="none" stroke-width="1" />
+<g transform="translate(916,591) scale(0.9605263157894737)" >
+<path d="M 24 48 L 14 74 L 34 64 L 41 77 L 48 52 M 50 47 L 61 74 L 67 63 L 75 72 L 66 44" fill="#ffe4a0" stroke="#d32814" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 38 4 L 48 10 L 59 8 L 64 19 L 73 27 L 69 38 L 73 50 L 59 56 L 51 65 L 40 61 L 29 65 L 21 56 L 9 51 L 12 38 L 8 28 L 19 20 L 24 9 L 35 11 Z" fill="#fff4b0" stroke="#d62717" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 40 19 L 46 31 L 59 33 L 49 42 L 51 54 L 40 48 L 29 54 L 31 42 L 21 33 L 34 31 Z" fill="#ffab08" stroke="#e37a00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+</g>
+<text x="991" y="634" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="36" font-weight="700" font-style="normal" fill="#101016" text-anchor="start" >Human semantic metrics</text>
+<rect x="756" y="660" width="260" height="81" rx="17" fill="#fafff8" stroke="#a9e7b0" stroke-width="1.6" />
+<circle cx="803" cy="700" r="25" fill="#3ebd21" stroke="#3ebd21" stroke-width="1" />
+<path d="M 790 700 L 800 710 L 816 689" fill="none" stroke="white" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" />
+<text x="839" y="713" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="28" font-weight="700" font-style="normal" fill="#101016" text-anchor="start" >Correctness</text>
+<rect x="1030" y="660" width="276" height="81" rx="17" fill="#fafff8" stroke="#a9e7b0" stroke-width="1.6" />
+<rect x="1056" y="679" width="43" height="43" rx="6" fill="none" stroke="#00a05c" stroke-width="4" />
+<line x1="1065" y1="690" x2="1091" y2="690" stroke="#00a05c" stroke-width="4" stroke-linecap="round" />
+<line x1="1065" y1="700" x2="1091" y2="700" stroke="#00a05c" stroke-width="4" stroke-linecap="round" />
+<line x1="1065" y1="710" x2="1085" y2="710" stroke="#00a05c" stroke-width="4" stroke-linecap="round" />
+<text x="1119" y="691" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="27" font-weight="700" font-style="normal" fill="#101016" text-anchor="start" ><tspan x="1119" dy="0">Rule</tspan><tspan x="1119" dy="28">completeness</tspan></text>
+<rect x="1320" y="660" width="247" height="81" rx="17" fill="#fafff8" stroke="#a9e7b0" stroke-width="1.6" />
+<g transform="translate(1344,678) scale(0.828125)" >
+<path d="M 21 40 L 14 47 Q 5 56 14 61 Q 22 65 29 57 L 40 46 Q 46 39 40 32" fill="none" stroke="#00a465" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 43 25 L 50 18 Q 59 9 50 4 Q 42 -1 35 7 L 24 19 Q 18 26 24 33" fill="none" stroke="#00a465" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 23 44 L 42 23" fill="none" stroke="#00a465" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" />
+</g>
+<text x="1420" y="691" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="27" font-weight="700" font-style="normal" fill="#101016" text-anchor="start" ><tspan x="1420" dy="0">Source</tspan><tspan x="1420" dy="28">fidelity</tspan></text>
+<rect x="34" y="810" width="1550" height="81" rx="25" fill="url(#lilac)" stroke="none" stroke-width="1" />
+<g transform="translate(307,819) scale(0.8666666666666667)" >
+<circle cx="45" cy="6" r="5" fill="#d8edfc" stroke="#163c54" stroke-width="3" />
+<line x1="45" y1="12" x2="45" y2="69" stroke="#163c54" stroke-width="3.4" stroke-linecap="round" />
+<path d="M 14 28 Q 45 17 76 28" fill="none" stroke="#163c54" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round" />
+<line x1="14" y1="28" x2="14" y2="37" stroke="#163c54" stroke-width="2.5" stroke-linecap="round" />
+<line x1="76" y1="28" x2="76" y2="37" stroke="#163c54" stroke-width="2.5" stroke-linecap="round" />
+<line x1="14" y1="28" x2="1" y2="60" stroke="#163c54" stroke-width="2.5" stroke-linecap="round" />
+<line x1="14" y1="28" x2="27" y2="60" stroke="#163c54" stroke-width="2.5" stroke-linecap="round" />
+<line x1="76" y1="28" x2="63" y2="60" stroke="#163c54" stroke-width="2.5" stroke-linecap="round" />
+<line x1="76" y1="28" x2="89" y2="60" stroke="#163c54" stroke-width="2.5" stroke-linecap="round" />
+<path d="M 1 59 Q 3 75 14 75 Q 25 75 27 59 Z" fill="#ffc437" stroke="#163c54" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 63 59 Q 65 75 76 75 Q 87 75 89 59 Z" fill="#ffc437" stroke="#163c54" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 45 68 V 83 M 31 84 H 59" fill="none" stroke="#163c54" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
+</g>
+<line x1="427" y1="827" x2="427" y2="873" stroke="#656277" stroke-width="2" stroke-linecap="round" />
+<text x="1005" y="863" font-family="Times New Roman, Tinos, Liberation Serif, serif" font-size="39" font-weight="700" font-style="italic" fill="#101016" text-anchor="middle" >Separate metrics for broad and deep evaluation.</text>
+</svg>

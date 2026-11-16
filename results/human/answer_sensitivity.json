@@ -1,0 +1,514 @@
+[
+  {
+    "model_id": "openai/gpt-4.1-mini",
+    "comparison": "D_minus_C",
+    "metric": "correctness",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.08695652173913043,
+    "interval": [
+      -0.0625,
+      0.23333333333333334
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "openai/gpt-4.1-mini",
+    "comparison": "D_minus_C",
+    "metric": "correctness",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.08695652173913043,
+    "interval": [
+      -0.046153846153846156,
+      0.2251655629139073
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "openai/gpt-4.1-mini",
+    "comparison": "D_minus_C",
+    "metric": "source_fidelity",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.06521739130434782,
+    "interval": [
+      -0.05925925925925926,
+      0.1984126984126984
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "openai/gpt-4.1-mini",
+    "comparison": "D_minus_C",
+    "metric": "source_fidelity",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.06521739130434782,
+    "interval": [
+      -0.046153846153846156,
+      0.18
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "openai/gpt-4.1-mini",
+    "comparison": "D_minus_C",
+    "metric": "required_atom_coverage",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.10009489302967566,
+    "interval": [
+      0.004338095238095237,
+      0.21231770833333335
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "openai/gpt-4.1-mini",
+    "comparison": "D_minus_C",
+    "metric": "required_atom_coverage",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.10009489302967566,
+    "interval": [
+      0.016237191078963226,
+      0.19064200680272111
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "openai/gpt-4.1-mini",
+    "comparison": "D_minus_C",
+    "metric": "full_required_rule_completeness",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.13043478260869565,
+    "interval": [
+      0.006802721088435374,
+      0.25333333333333335
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "openai/gpt-4.1-mini",
+    "comparison": "D_minus_C",
+    "metric": "full_required_rule_completeness",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.13043478260869565,
+    "interval": [
+      0.022222222222222223,
+      0.24822695035460993
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "qwen/qwen3.8-flash",
+    "comparison": "D_minus_C",
+    "metric": "correctness",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.2246376811594203,
+    "interval": [
+      0.0625,
+      0.391304347826087
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "qwen/qwen3.8-flash",
+    "comparison": "D_minus_C",
+    "metric": "correctness",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.2246376811594203,
+    "interval": [
+      0.0703125,
+      0.4074074074074074
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "qwen/qwen3.8-flash",
+    "comparison": "D_minus_C",
+    "metric": "source_fidelity",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.15942028985507245,
+    "interval": [
+      0.072,
+      0.25517241379310346
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "qwen/qwen3.8-flash",
+    "comparison": "D_minus_C",
+    "metric": "source_fidelity",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.15942028985507245,
+    "interval": [
+      0.08270676691729323,
+      0.24427480916030533
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "qwen/qwen3.8-flash",
+    "comparison": "D_minus_C",
+    "metric": "required_atom_coverage",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.14007792730618818,
+    "interval": [
+      0.030969227313566928,
+      0.24995670995671
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "qwen/qwen3.8-flash",
+    "comparison": "D_minus_C",
+    "metric": "required_atom_coverage",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.14007792730618818,
+    "interval": [
+      0.04234395512591001,
+      0.2454974068835455
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "qwen/qwen3.8-flash",
+    "comparison": "D_minus_C",
+    "metric": "full_required_rule_completeness",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.21739130434782608,
+    "interval": [
+      0.05442176870748299,
+      0.3888888888888889
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "qwen/qwen3.8-flash",
+    "comparison": "D_minus_C",
+    "metric": "full_required_rule_completeness",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.21739130434782608,
+    "interval": [
+      0.06451612903225806,
+      0.4049079754601227
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "gpt-6.1-sol",
+    "comparison": "D_minus_C",
+    "metric": "correctness",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.15942028985507245,
+    "interval": [
+      0.02830188679245283,
+      0.3333333333333333
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "gpt-6.1-sol",
+    "comparison": "D_minus_C",
+    "metric": "correctness",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.15942028985507245,
+    "interval": [
+      0.02727272727272727,
+      0.35260115606936415
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "gpt-6.1-sol",
+    "comparison": "D_minus_C",
+    "metric": "source_fidelity",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.050724637681159424,
+    "interval": [
+      -0.006802721088435374,
+      0.12264150943396226
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "gpt-6.1-sol",
+    "comparison": "D_minus_C",
+    "metric": "source_fidelity",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.050724637681159424,
+    "interval": [
+      -0.007518796992481203,
+      0.1276595744680851
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "gpt-6.1-sol",
+    "comparison": "D_minus_C",
+    "metric": "required_atom_coverage",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.10668276972624798,
+    "interval": [
+      0.024978466838931956,
+      0.19642857142857142
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "gpt-6.1-sol",
+    "comparison": "D_minus_C",
+    "metric": "required_atom_coverage",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.10668276972624798,
+    "interval": [
+      0.02459016393442623,
+      0.21175523349436393
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "gpt-6.1-sol",
+    "comparison": "D_minus_C",
+    "metric": "full_required_rule_completeness",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.15942028985507245,
+    "interval": [
+      0.02830188679245283,
+      0.3333333333333333
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "gpt-6.1-sol",
+    "comparison": "D_minus_C",
+    "metric": "full_required_rule_completeness",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.15942028985507245,
+    "interval": [
+      0.02727272727272727,
+      0.35260115606936415
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "deepseek-v4.1-flash",
+    "comparison": "D_minus_C",
+    "metric": "correctness",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.16666666666666666,
+    "interval": [
+      0.02608695652173913,
+      0.3253968253968254
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "deepseek-v4.1-flash",
+    "comparison": "D_minus_C",
+    "metric": "correctness",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.16666666666666666,
+    "interval": [
+      0.03968253968253968,
+      0.312
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "deepseek-v4.1-flash",
+    "comparison": "D_minus_C",
+    "metric": "source_fidelity",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.15217391304347827,
+    "interval": [
+      0.018691588785046728,
+      0.2949640287769784
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "deepseek-v4.1-flash",
+    "comparison": "D_minus_C",
+    "metric": "source_fidelity",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.15217391304347827,
+    "interval": [
+      0.037037037037037035,
+      0.2746478873239437
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "deepseek-v4.1-flash",
+    "comparison": "D_minus_C",
+    "metric": "required_atom_coverage",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.1392914653784219,
+    "interval": [
+      0.019937275985663083,
+      0.3023879142300195
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "deepseek-v4.1-flash",
+    "comparison": "D_minus_C",
+    "metric": "required_atom_coverage",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.1392914653784219,
+    "interval": [
+      0.03072763028515241,
+      0.2826003086419753
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "deepseek-v4.1-flash",
+    "comparison": "D_minus_C",
+    "metric": "full_required_rule_completeness",
+    "cluster": "fact_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.15942028985507245,
+    "interval": [
+      0.021739130434782608,
+      0.32
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  },
+  {
+    "model_id": "deepseek-v4.1-flash",
+    "comparison": "D_minus_C",
+    "metric": "full_required_rule_completeness",
+    "cluster": "dependency_group_id",
+    "status": "complete",
+    "paired_question_weighted_difference": 0.15942028985507245,
+    "interval": [
+      0.037037037037037035,
+      0.30327868852459017
+    ],
+    "n_clusters": 45,
+    "replicates": 2000,
+    "seed": 20261105,
+    "interpretation": "descriptive, potentially unstable operational-group bootstrap; not population inference"
+  }
+]

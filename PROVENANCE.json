@@ -1,0 +1,122 @@
+{
+  "snapshot": "2026-11-15",
+  "benchmark_questions": 501,
+  "reviewed_core": 138,
+  "human_outputs": 1104,
+  "independent_review_forms": 2208,
+  "adjudications": 113,
+  "files": [
+    {
+      "file": "data/sources.jsonl",
+      "sha256": "d7e3527cfc94201e6de800919b9360d28110c32b803539562e829906d52199ba",
+      "transfer": "byte-identical"
+    },
+    {
+      "file": "data/required_rules.jsonl",
+      "sha256": "92c77527f84c01034977138ad68b26600f10ca3fc391d5a36d4887813305d175",
+      "transfer": "byte-identical"
+    },
+    {
+      "file": "data/evidence_sets.jsonl",
+      "sha256": "67f50f7414aecacfec272b5812229cc7e52d08be1e52e71e2a6a479117868e2c",
+      "transfer": "byte-identical"
+    },
+    {
+      "file": "results/human/answer_items.jsonl",
+      "sha256": "bff838f4f6f98d08c7f485876d8fbb251e498040b3a27e1923a64b777a61f042",
+      "transfer": "byte-identical"
+    },
+    {
+      "file": "results/human/answer_tables.jsonl",
+      "sha256": "5586eee892e87f0ad9657db85354d01a011693a9dc6e6824933e91be1e535aa0",
+      "transfer": "byte-identical"
+    },
+    {
+      "file": "results/human/human_unclear_sensitivity_tables.jsonl",
+      "sha256": "8b66953af47be2f39533f8b4ecb15c13c4e5d5dbe3c33bc3472bc4584cd4bdeb",
+      "transfer": "byte-identical"
+    },
+    {
+      "file": "results/human/answer_sensitivity.json",
+      "sha256": "c4ed798b708c4c3b2404285877130172ef76b725e584e2a012d0977c2e247e28",
+      "transfer": "byte-identical"
+    },
+    {
+      "file": "results/human/joint_counts.json",
+      "sha256": "f936e7de688b559ad87e873c4eeec2a3e1c9e776092341e39dd841067db7b825",
+      "transfer": "byte-identical"
+    },
+    {
+      "file": "results/broad/retrieval_evidence.jsonl",
+      "sha256": "6075c9c8f930d02eb4cc420e805169f20f1df0a7751740b74f4e03a3d4d9930e",
+      "transfer": "byte-identical"
+    },
+    {
+      "file": "evaluation/evidence/scorer.py",
+      "sha256": "95cd4f3dcb1e6f0902503dc8ccf8b81a8db21364e65243b8c20e2edb0f0c0b46",
+      "transfer": "byte-identical"
+    },
+    {
+      "file": "evaluation/evidence/schema.py",
+      "sha256": "66100c18861e1f4d680a23d1cb0fe72ca9f40531a71527e5655e2e6028bd13fc",
+      "transfer": "byte-identical"
+    },
+    {
+      "file": "evaluation/routing/scorer.py",
+      "sha256": "0c27371196d5a62aea6b33c7b7b3c92251d2bb0efdc9c43b96be62a2d7ed7e57",
+      "transfer": "byte-identical"
+    },
+    {
+      "file": "evaluation/routing/schema.py",
+      "sha256": "66100c18861e1f4d680a23d1cb0fe72ca9f40531a71527e5655e2e6028bd13fc",
+      "transfer": "byte-identical"
+    },
+    {
+      "file": "evaluation/human_metrics.py",
+      "transfer": "verbatim-function-extraction",
+      "functions": [
+        "indexed",
+        "logic_paths",
+        "rule_metrics",
+        "aggregate_fixed",
+        "paired_cluster_bootstrap"
+      ],
+      "upstream_sha256": "28d6397864e1b970bf6d43b2d58eb3a40efc75c882f0db86a3be4a50296d7ea0"
+    },
+    {
+      "file": "evaluation/agreement.py",
+      "transfer": "verbatim-function-extraction",
+      "functions": [
+        "agreement"
+      ],
+      "upstream_sha256": "1bbd3004ac4894ca812c9c41435d097f1cc5a53d4200a02141b99224d45085a7"
+    },
+    {
+      "file": "evaluation/broad_metrics.py",
+      "transfer": "verbatim-function-extraction",
+      "functions": [
+        "mean",
+        "equal_groups",
+        "paired_summary"
+      ],
+      "upstream_sha256": "52dda023dd9feda3597268aba9f39c952ee1ffcc3f4817c9133d1e334a65287c"
+    },
+    {
+      "file": "LICENSE",
+      "sha256": "d508b7c58acc83182b70f1fd9a1f50f7479159655dfd403fe669e853068e95b9",
+      "transfer": "byte-identical"
+    },
+    {
+      "file": "paper/GlobalHRBench.pdf",
+      "sha256": "48a57414f5fccc1351f8f4959157e58c23820d4abde7f887c5c1a17f7f3a4fff",
+      "transfer": "byte-identical"
+    }
+  ],
+  "privacy_transformations": [
+    "Allowlisted research fields only",
+    "Reviewer identities, dates, workbook metadata and coordinator keys excluded",
+    "Original answer strings and scoring labels retained",
+    "No private Git history copied"
+  ],
+  "scope": "Offline research snapshot, not provider account archives or historical submissions"
+}

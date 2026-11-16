@@ -1,0 +1,230 @@
+{
+  "correctness": {
+    "n": 1104,
+    "raw_exact_agreement": 0.9556159420289855,
+    "reviewer_1_marginals": {
+      "correct": 847,
+      "incorrect": 224,
+      "unclear": 33
+    },
+    "reviewer_2_marginals": {
+      "correct": 838,
+      "incorrect": 229,
+      "unclear": 37
+    },
+    "cohens_kappa": 0.8815017316045763,
+    "kappa_note": "undefined for degenerate marginals; descriptive with clustered units",
+    "directional_confusion": [
+      {
+        "reviewer_1": "correct",
+        "reviewer_2": "correct",
+        "count": 822
+      },
+      {
+        "reviewer_1": "correct",
+        "reviewer_2": "incorrect",
+        "count": 15
+      },
+      {
+        "reviewer_1": "correct",
+        "reviewer_2": "unclear",
+        "count": 10
+      },
+      {
+        "reviewer_1": "incorrect",
+        "reviewer_2": "correct",
+        "count": 8
+      },
+      {
+        "reviewer_1": "incorrect",
+        "reviewer_2": "incorrect",
+        "count": 211
+      },
+      {
+        "reviewer_1": "incorrect",
+        "reviewer_2": "unclear",
+        "count": 5
+      },
+      {
+        "reviewer_1": "unclear",
+        "reviewer_2": "correct",
+        "count": 8
+      },
+      {
+        "reviewer_1": "unclear",
+        "reviewer_2": "incorrect",
+        "count": 3
+      },
+      {
+        "reviewer_1": "unclear",
+        "reviewer_2": "unclear",
+        "count": 22
+      }
+    ]
+  },
+  "whole_answer_fidelity": {
+    "n": 1104,
+    "raw_exact_agreement": 0.9601449275362319,
+    "reviewer_1_marginals": {
+      "no_material_claims": 20,
+      "supported": 867,
+      "unclear": 14,
+      "unsupported": 203
+    },
+    "reviewer_2_marginals": {
+      "no_material_claims": 20,
+      "supported": 879,
+      "unclear": 16,
+      "unsupported": 189
+    },
+    "cohens_kappa": 0.8837149176984288,
+    "kappa_note": "undefined for degenerate marginals; descriptive with clustered units",
+    "directional_confusion": [
+      {
+        "reviewer_1": "no_material_claims",
+        "reviewer_2": "no_material_claims",
+        "count": 20
+      },
+      {
+        "reviewer_1": "supported",
+        "reviewer_2": "supported",
+        "count": 853
+      },
+      {
+        "reviewer_1": "supported",
+        "reviewer_2": "unclear",
+        "count": 6
+      },
+      {
+        "reviewer_1": "supported",
+        "reviewer_2": "unsupported",
+        "count": 8
+      },
+      {
+        "reviewer_1": "unclear",
+        "reviewer_2": "supported",
+        "count": 4
+      },
+      {
+        "reviewer_1": "unclear",
+        "reviewer_2": "unclear",
+        "count": 8
+      },
+      {
+        "reviewer_1": "unclear",
+        "reviewer_2": "unsupported",
+        "count": 2
+      },
+      {
+        "reviewer_1": "unsupported",
+        "reviewer_2": "supported",
+        "count": 22
+      },
+      {
+        "reviewer_1": "unsupported",
+        "reviewer_2": "unclear",
+        "count": 2
+      },
+      {
+        "reviewer_1": "unsupported",
+        "reviewer_2": "unsupported",
+        "count": 179
+      }
+    ]
+  },
+  "atoms": {
+    "n": 4176,
+    "raw_exact_agreement": 0.9885057471264368,
+    "reviewer_1_marginals": {
+      "absent": 298,
+      "contradicted": 75,
+      "covered": 3790,
+      "unclear": 13
+    },
+    "reviewer_2_marginals": {
+      "absent": 314,
+      "covered": 3790,
+      "unclear": 2,
+      "contradicted": 70
+    },
+    "cohens_kappa": 0.9326457949992407,
+    "kappa_note": "undefined for degenerate marginals; descriptive with clustered units",
+    "directional_confusion": [
+      {
+        "reviewer_1": "absent",
+        "reviewer_2": "absent",
+        "count": 292
+      },
+      {
+        "reviewer_1": "absent",
+        "reviewer_2": "contradicted",
+        "count": 1
+      },
+      {
+        "reviewer_1": "absent",
+        "reviewer_2": "covered",
+        "count": 4
+      },
+      {
+        "reviewer_1": "absent",
+        "reviewer_2": "unclear",
+        "count": 1
+      },
+      {
+        "reviewer_1": "contradicted",
+        "reviewer_2": "absent",
+        "count": 7
+      },
+      {
+        "reviewer_1": "contradicted",
+        "reviewer_2": "contradicted",
+        "count": 60
+      },
+      {
+        "reviewer_1": "contradicted",
+        "reviewer_2": "covered",
+        "count": 8
+      },
+      {
+        "reviewer_1": "covered",
+        "reviewer_2": "absent",
+        "count": 8
+      },
+      {
+        "reviewer_1": "covered",
+        "reviewer_2": "contradicted",
+        "count": 7
+      },
+      {
+        "reviewer_1": "covered",
+        "reviewer_2": "covered",
+        "count": 3775
+      },
+      {
+        "reviewer_1": "unclear",
+        "reviewer_2": "absent",
+        "count": 7
+      },
+      {
+        "reviewer_1": "unclear",
+        "reviewer_2": "contradicted",
+        "count": 2
+      },
+      {
+        "reviewer_1": "unclear",
+        "reviewer_2": "covered",
+        "count": 3
+      },
+      {
+        "reviewer_1": "unclear",
+        "reviewer_2": "unclear",
+        "count": 1
+      }
+    ]
+  },
+  "all_labels_exact_output_agreement": {
+    "n": 1104,
+    "raw_exact_agreement": 0.9193840579710145
+  },
+  "interpretation": "Pooled initial-review slots across jurisdictions and two evaluation batches; not individual-rater reliability."
+}
